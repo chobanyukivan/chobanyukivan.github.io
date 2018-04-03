@@ -14,5 +14,169 @@ body input:required:valid,
 body textarea:required:valid
 	color: green
 
+header, section
+	position: relative
+
+section, footer
+	padding: 50px 0
+
+.head
+	height: 100vh
+
+.head_bgc_darker
+	background-color: rgba(0,0,0, 0.4)
+
+.loader
+	background: none repeat scroll 0 0 #ffffff
+	bottom: 0
+	height: 100%
+	left: 0
+	position: fixed
+	right: 0
+	top: 0
+	width: 100%
+	z-index: 9999
+	.loader_inner
+		background-image: url("../img/preloader.gif")
+		background-size: cover
+		background-repeat: no-repeat
+		background-color: #fff
+		height: 60px
+		width: 60px
+		margin-top: -30px
+		margin-left: -30px
+		left: 50%
+		top: 50%
+		position: absolute
+
+header .button-toggle
+	width: 70px
+	height: 70px
+	display: flex
+	position: fixed
+	right: 20px
+	top: 20px
+	margin-top: 25px
+	background-color: #080907
+	border: none
+	border-radius: 40%
+	justify-content: center
+	align-items: center
+	z-index: 15
+	outline: none
+
+.menu
+	position: fixed
+	left: 0
+	top: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(0,0,0,.8)
+	display: none
+	z-index: 10
+	.menu-wrapper
+		display: flex
+		justify-content: center
+		align-items: center
+		height: 100%
+
+.menu-item, ul
+	margin: 0
+	padding: 0
+	width: 100%
+
+.menu-item
+	text-align: center
+	margin-bottom: 25px
+	list-style-type: none
+	a
+		color: #acacac
+		display: block
+		font-size: 3em
+		text-decoration: none
+		&:hover
+			color: #ffffff
+			transition: 1s
+			background-color: rgba(255,255,255,.1)
+
+.content-wrapper
+	height: 100vh
+	color: #e8e8e8
+	display: flex
+	flex-direction: column
+	justify-content: center
+	align-items: center
+	z-index: 10
+
+.content-wrapper__name
+	border: 0.15em solid #e8e8e8
+	padding: 16px 32px
+	text-transform: uppercase
+	font-size: 2.8em
+	text-align: center
+	font-weight: 500
+	animation-delay: 1s
+
+.content-wrapper__dscr
+	font-size: 1.5em
+	text-align: center
+	animation-delay: 1.5s
+
+.section_bgc_about, .section_bgc_contacts
+	background-color: #fafafa
+
+.section__title, .section__descr
+	text-align: center
+
+.section_bgc_resum
+	background-color: #e7e7e7
+.section_bgc_portf
+	background-color: #222222
+.section_color_fff
+	color: #ffffff
+div.section__separator_bgc_fff
+	background-color: #ffffff
+.section__separator
+	height: 1px
+	width: 150px
+	background-color: #292b2c
+	margin: 50px auto 70px auto
+.foot_bg_dark
+	background-color: #222222
+.foot_color_fff
+	color: #ffffff
+.title_text_modification
+	text-align: center
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 700
+	margin-bottom: 30px
+.section-photo
+	text-align: center
+	margin-bottom: 35px
+.section-photo__img
+	max-width: 255px
+	border-radius: 50%
+.section-about__content
+	margin: 25px 0
+.section-person
+	margin-bottom: 35px
+.section-person_textalign-center
+	text-align: center
+.section-person__name
+	font-size: 20px
+	text-transform: uppercase
+	margin-bottom: 30px
+.section-person-social ul
+	list-style: none
+	margin-top: 25px
+.section-person-social__item
+	display: inline-block
+	font-size: 2em
+	margin-right: 15px
+.section-person__content li
+	list-style: none
+	margin-bottom: 15px
+
 
 

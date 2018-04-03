@@ -4,25 +4,149 @@
     <meta charset="utf-8"/>
     <title>Заголовок</title>
 
-    <link rel="shortcut icon" href="favicon.png"/>
+    <!--<link rel="shortcut icon" href="favicon.png"/>-->
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css"/>
+    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="libs/fontawesome/css/fontawesome-all.css"/>
     <link rel="stylesheet" href="libs/linea/styles.css"/>
     <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css"/>
     <link rel="stylesheet" href="libs/animate/animate.min.css"/>
+    <link rel="stylesheet" href="libs/parallax/parallax.min.js"/>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
-<header>
+<div class="loader">
+    <div class="loader_inner"></div>
+</div>
+<header id="head" class="head head_bgc_darker" data-parallax="scroll" data-image-src="/img/bg2.jpg">
     <div class="container">
+        <div class="row justify-content-end">
+            <div class="col-1">
+                <button class="button-toggle">
+                    <span class="button-toggle-sandwich">
+                        <span class="button-toggle-sandwich__sw-topper"></span>
+                        <span class="button-toggle-sandwich__sw-bottom"></span>
+                    </span>
+                </button>
+                <div class="row align-items-center">
+                    <nav class="menu">
+                        <div class="menu-wrapper">
+                            <ul>
+                                <li class="menu-item"><a  href="#about">Обо мне</a></li>
+                                <li class="menu-item"><a  href="#resum">Резюме</a></li>
+                                <li class="menu-item"><a  href="#portf">Портфолио</a></li>
+                                <li class="menu-item"><a  href="#contacts">Контакты</a></li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
         <div class="row">
-            <div class="col-lg">
-                <h1>Тестовый заголовок</h1>
+            <div class="col">
+                <div class="content-wrapper">
+                    <h1 class="content-wrapper__name">Чобанюк Иван</h1>
+                    <p class="content-wrapper__dscr">HTML-верстальщик, Front-end разработчик</p>
+                </div>
             </div>
         </div>
     </div>
 </header>
-
-
+<section id="about" class="section section_bgc_about">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="section__wrapper">
+                    <h2 class="section__title">Обо мне</h2>
+                    <div class="section__separator"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-lg-4 col_flex-md-order-3">
+                <div class="section-about section_animation-1">
+                    <h3 class="section-about__title title_text_modification">Немного о себе</h3>
+                    <p class="section-about__content">Начинающий Frontend разработчик с опытом работы в данной сфере чуть менее года. Имею высшее образование. Изучением web разработки  я заинтересовался в середине 2017 году, после чего начал активно изучать направление Frontend данной отрасли с использованием технической литературы и тематических форумов. До этого имел опыт разработки приложений на delphi в рамках дипломного проектирования и участия в конкурсах.</p>
+                    <p class="section-about__content">Для решения поставленных задач использую современные инструменты. С легкостью изучаю и применяю новые технологии, разбираюсь в чужом коде. Владею английским языком на уровне чтения технической литературы. Хотел бы работать в Вашей компании, чтобы продолжать развивать свои навыки, учиться и набираться опыта.</p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col_flex-md-order-1">
+                <div class="section-photo section_animation-2">
+                    <h3 class="section-photo__title title_text_modification">Фото</h3>
+                    <a href="img/IMG_3976.jpg" class="popup"><img class="section-photo__img "src="img/IMG_3976.jpg" alt="Чобанюк И.С."></a>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 col-lg-4 col_flex-md-order-2">
+                <div class="section-person section-person_textalign-center section_animation-3">
+                    <!--todo исправить косяк анимации секции person-->
+                    <h3 class="section-person__title title_text_modification">Персональная информация</h3>
+                    <h2 class="section-person__name">Чобанюк Иван</h2>
+                    <ul class="section-person__content">
+                        <li>HTML верстка, web-программирование</li>
+                        <li>День рождения: 1 ноября 1991 года</li>
+                        <li>Номер телефона: +375-29-643 92 26</li>
+                        <li>E-mail: chobanyuk.ivan@gmail.com</li>
+                    </ul>
+                    <div class="section-person-social">
+                        <ul>
+                            <li class="section-person-social__item" ><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
+                            <li class="section-person-social__item"><a href="https://vk.com/"><i class="fab fa-vk"></i></a></li>
+                            <li class="section-person-social__item"><a href="https://github.com/"><i class="fab fa-github"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="resum" class="section section_bgc_resum">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section__wrapper">
+                    <h2 class="section__title">Резюме</h2>
+                    <div class="section__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla!</div>
+                    <div class="section__separator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="portf" class="section section_bgc_portf section_color_fff">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section__wrapper">
+                    <h2 class="section__title">Портфолио</h2>
+                    <div class="section__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla!</div>
+                    <div class="section__separator section__separator_bgc_fff"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="contacts" class="section section_bgc_contacts">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section__wrapper">
+                    <h2 class="section__title">Контакты</h2>
+                    <div class="section__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla!</div>
+                    <div class="section__separator"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<footer class="foot foot_bg_dark foot_color_fff">
+    <div class="container">
+        <div class="col-12">
+            <div class="foot__content">
+                &copy; 2018 Чобанюк Иван
+            </div>
+        </div>
+    </div>
+</footer>
 </body>
 
 <script src="libs/jquery/jquery-2.1.3.min.js"></script>

@@ -1,1 +1,5 @@
-@font-face {  font-family: "Raleway";  src: url("../fonts/RalewayRegular/RalewayRegular.ttf");  font-style: normal; }@font-face {  font-family: "Raleway";  src: url("../fonts/RalewayBold/RalewayBold.ttf");  font-style: 700; }@font-face {  font-family: "Raleway";  src: url("../fonts/RalewayLight/RalewayLight.ttf");  font-style: 300; }@font-face {  font-family: "Raleway";  src: url("../fonts/RalewaySemiBold/RalewaySemiBold.ttf");  font-style: 600; }
+@font-face {
+  font-family: "Raleway-Black";
+  src: url("../fonts/RalewaySemiBold/RalewaySemiBold.ttf") format("truetype");
+  font-style: normal;
+  font-weight: normal; }
