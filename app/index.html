@@ -8,9 +8,9 @@
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css"/>
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="libs/fontawesome/css/fontawesome-all.css"/>
-    <link rel="stylesheet" href="libs/linea/styles.css"/>
     <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css"/>
     <link rel="stylesheet" href="libs/animate/animate.min.css"/>
+    <link rel="stylesheet" href="libs/preloader/preloader.css"/>
     <link rel="stylesheet" href="libs/parallax/parallax.min.js"/>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
@@ -32,10 +32,10 @@
                     <nav class="menu">
                         <div class="menu-wrapper">
                             <ul>
-                                <li class="menu-item"><a  href="#about">Обо мне</a></li>
-                                <li class="menu-item"><a  href="#resum">Резюме</a></li>
-                                <li class="menu-item"><a  href="#portf">Портфолио</a></li>
-                                <li class="menu-item"><a  href="#contacts">Контакты</a></li>
+                                <li class="menu-item"><a href="#about">Обо мне</a></li>
+                                <li class="menu-item"><a href="#resum">Резюме</a></li>
+                                <li class="menu-item"><a href="#portf">Портфолио</a></li>
+                                <li class="menu-item"><a href="#contacts">Контакты</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -57,71 +57,265 @@
         <div class="row">
             <div class="col-12">
                 <div class="section__wrapper">
-                    <h2 class="section__title">Обо мне</h2>
-                    <div class="section__separator"></div>
+                    <h2 class="section__title section__title_color">Обо мне</h2>
+                    <div class="section__separator section_bgc_theme"></div>
                 </div>
             </div>
         </div>
         <div class="row">
             <div class="col-12 col-lg-4 col_flex-md-order-3">
                 <div class="section-about section_animation-1">
-                    <h3 class="section-about__title title_text_modification">Немного о себе</h3>
-                    <p class="section-about__content">Начинающий Frontend разработчик с опытом работы в данной сфере чуть менее года. Имею высшее образование. Изучением web разработки  я заинтересовался в середине 2017 году, после чего начал активно изучать направление Frontend данной отрасли с использованием технической литературы и тематических форумов. До этого имел опыт разработки приложений на delphi в рамках дипломного проектирования и участия в конкурсах.</p>
-                    <p class="section-about__content">Для решения поставленных задач использую современные инструменты. С легкостью изучаю и применяю новые технологии, разбираюсь в чужом коде. Владею английским языком на уровне чтения технической литературы. Хотел бы работать в Вашей компании, чтобы продолжать развивать свои навыки, учиться и набираться опыта.</p>
+                    <h3 class="section-about__title title_text title_h3_color">Немного о себе</h3>
+                    <p class="section-about__content">Frontend разработчик с опытом работы в данной сфере
+                        чуть менее года. Имею высшее образование. Изучением web разработки я заинтересовался в середине
+                        2017 году, после чего начал активно изучать направление Frontend данной отрасли с использованием
+                        технической литературы и тематических форумов.</p>
+                    <p class="section-about__content">Для решения поставленных задач использую современные инструменты.
+                        С легкостью изучаю и применяю новые технологии, разбираюсь в чужом коде. Владею английским
+                        языком на уровне чтения технической литературы.</p>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 col_flex-md-order-1">
                 <div class="section-photo section_animation-2">
-                    <h3 class="section-photo__title title_text_modification">Фото</h3>
-                    <a href="img/IMG_3976.jpg" class="popup"><img class="section-photo__img "src="img/IMG_3976.jpg" alt="Чобанюк И.С."></a>
+                    <h3 class="section-photo__title title_text title_h3_color">Фото</h3>
+                    <a href="img/IMG_3976.jpg" class="popup"><img class="section-photo__img" src="img/IMG_3976.jpg"
+                                                                  alt="Чобанюк И.С."></a>
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 col_flex-md-order-2">
                 <div class="section-person section-person_textalign-center section_animation-3">
-                    <!--todo исправить косяк анимации секции person-->
-                    <h3 class="section-person__title title_text_modification">Персональная информация</h3>
+                    <h3 class="section-person__title title_text title_h3_color">Персональная информация</h3>
                     <h2 class="section-person__name">Чобанюк Иван</h2>
                     <ul class="section-person__content">
                         <li>HTML верстка, web-программирование</li>
-                        <li>День рождения: 1 ноября 1991 года</li>
                         <li>Номер телефона: +375-29-643 92 26</li>
-                        <li>E-mail: chobanyuk.ivan@gmail.com</li>
+                        <li>E-mail: <a href="mailto:chobanyuk.ivan@gmail.com">chobanyuk.ivan@gmail.com</a></li>
                     </ul>
                     <div class="section-person-social">
-                        <ul>
-                            <li class="section-person-social__item" ><a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a></li>
-                            <li class="section-person-social__item"><a href="https://vk.com/"><i class="fab fa-vk"></i></a></li>
-                            <li class="section-person-social__item"><a href="https://github.com/"><i class="fab fa-github"></i></a></li>
+                        <ul class="section-person-social_margin-top">
+                            <li class="section-person-social__item"><a class="section-person-social__item_color_theme" href="https://www.linkedin.com/"><i
+                                    class="fab fa-linkedin"></i></a></li>
+                            <li class="section-person-social__item"><a class="section-person-social__item_color_theme" href="https://vk.com/"><i class="fab fa-vk"></i></a>
+                            </li>
+                            <li class="section-person-social__item"><a class="section-person-social__item_color_theme" href="https://github.com/"><i
+                                    class="fab fa-github"></i></a></li>
                         </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
-<section id="resum" class="section section_bgc_resum">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <div class="section__wrapper">
-                    <h2 class="section__title">Резюме</h2>
-                    <div class="section__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla!</div>
-                    <div class="section__separator"></div>
+        <div class="row" >
+            <div class="col-md-4 col-sm-6 col-12 section-tecnology-item_bg_image section_animation-1">
+                <div class="section-tecnology-item">
+                    <h3 class="section-tecnology-item__title title_h3_tecnology_color">HTML5</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 section-tecnology-item_bg_image section_animation-2">
+                <div class="section-tecnology-item">
+                    <h3 class="section-tecnology-item__title title_h3_tecnology_color">CSS3</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 section-tecnology-item_bg_image section_animation-3">
+                <div class="section-tecnology-item">
+                    <h3 class="section-tecnology-item__title title_h3_tecnology_color">SASS</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 section-tecnology-item_bg_image section_animation-1">
+                <div class="section-tecnology-item">
+                    <h3 class="section-tecnology-item__title title_h3_tecnology_color">JavaScript</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 section-tecnology-item_bg_image section_animation-4">
+                <div class="section-tecnology-item">
+                    <h3 class="section-tecnology-item__title title_h3_tecnology_color">JQuerry</h3>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-6 col-12 section-tecnology-item_bg_image section_animation-3">
+                <div class="section-tecnology-item">
+                    <h3 class="section-tecnology-item__title title_h3_tecnology_color">Bootstrap4</h3>
                 </div>
             </div>
         </div>
     </div>
 </section>
-<section id="portf" class="section section_bgc_portf section_color_fff">
+
+<section id="resum" class="section section_bgc_e7">
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="section__wrapper">
-                    <h2 class="section__title">Портфолио</h2>
-                    <div class="section__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla!</div>
-                    <div class="section__separator section__separator_bgc_fff"></div>
+                    <h2 class="section__title section__title_color">Резюме</h2>
+                    <!--todo определить наполнение
+                    <div class="section__descr section__descr_color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla!</div>-->
+                    <div class="section__separator section_bgc_theme"></div>
                 </div>
             </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-md-6 section-resume section-resume_ta_right section-resume_ta_center">
+                <h3 class="section-resume__title title_text title_h3_color section_animation-1">Работа</h3>
+                <div class="section-resume__logo section_animation-1"><i class="fas fa-desktop"></i></div>
+                <div class="section-resume-item section_animation-1">
+                    <div class="section-resume-item__year section_bgc_theme">Июль 2017 - настоящее время</div>
+                    <br>
+                    <div class="section-resume-item__place">Удаленная занятость</div>
+                    <div class="section-resume-item__position">Frontend-разработчик</div>
+                    <p class="section-resume-item__descr">Верстка одностраничных сайтов (landing-page) по PSD-макетам.
+                        Участвовал в создании отдельных страниц интернет-магазина для заказчика из Швеции, работая в
+                        команде (с использованием JIRA). Занимался версткой страниц и компонентов c использованием
+                        возможностей CSS-3 анимаций, методологии БЭМ, таск-менеджера Gulp, препроцессора SASS, для
+                        последующей интеграции модульной верстки в AngularJs приложение.</p>
+                </div>
+                <div class="section-resume-item section_animation-1">
+                    <div class="section-resume-item__year section_bgc_theme">Август 2015 — Июль 2017</div>
+                    <br>
+                    <div class="section-resume-item__place">Департамент по гуманитарной деятельности <br> Управления
+                        делами Президента <br> Республики Беларусь
+                    </div>
+                    <div class="section-resume-item__position section-resume-item__position_vertical_align">Главный
+                        специалист
+                    </div>
+                    <p class="section-resume-item__descr">Документооборот, деловая переписка, функции экономиста,
+                        высокая степень ответственности</p>
+                </div>
+                <div class="section-resume-item section_animation-1">
+                    <div class="section-resume-item__year section_bgc_theme">Сентябрь 2015 — Сентябрь 2016</div>
+                    <br>
+                    <div class="section-resume-item__place">УЗ "БГП №6"</div>
+                    <div class="section-resume-item__position">Системный администратор</div>
+                    <p class="section-resume-item__descr">Проектирование, прокладка и настройка сети. Консультирование и
+                        поддержка пользователей по всевозможным вопросам, связанных с ИТ, разработка и поддержка сайта.
+                    </p>
+                </div>
+            </div>
+            <div class="col-12 col-md-6 section-resume section-resume_ta_left section-resume_ta_center ">
+                <h3 class="section-resume__title title_text title_h3_color section_animation-3">Учеба</h3>
+                <div class="section-resume__logo section_animation-3"><i class="fas fa-graduation-cap"></i></div>
+                <div class="section-resume-item section_animation-3">
+                    <div class="section-resume-item__year section_bgc_theme ">Февраль 2017 - настоящее время</div>
+                    <br>
+                    <div class="section-resume-item__position ">Самостоятельное изучение</div>
+                    <p class="section-resume-item__descr ">Самостоятельное изучение технологий Frontend-разработки с
+                        использованием следующих литературных источников: <br>
+                        1. Книги (Э. Фримен , Э. Робсон - Изучаем программирование на JavaScript; Д. Флэнаган -
+                        JavaScript. Подробное руководство, 6-е издание; Д. Макфарланд - Новая большая книга CSS)<br>
+                        2. Курсы: htmlacademy, learn.javascript<br>
+                        3. Вебинары и специализированные youtube-каналы
+                    </p>
+                </div>
+                <div class="section-resume-item section_animation-3">
+                    <div class="section-resume-item__year section_bgc_theme">2012 - 2015</div>
+                    <br>
+                    <div class="section-resume-item__place">Белорусский торгово-экономический университет<br>
+                        потребительской кооперации, Гомель
+                    </div>
+                    <p class="section-resume-item__descr">Факультет экономики и управления, специальность - управление
+                        информационными ресурсами.<br>Во время получения высшего образования принимал участие в конкурсе
+                        студенческих работ, в рамках которого мной было разработано приложение психо-эмоционального
+                        тестирования личности на Dephi. Занял первое место, приложение внедрено в образовательный
+                        процесс. </p>
+                </div>
+                <div class="section-resume-item section_animation-3">
+                    <div class="section-resume-item__year section_bgc_theme">2008 - 2012</div>
+                    <br>
+                    <div class="section-resume-item__place">Белорусский Государственный Аграрно-Экономический Колледж
+                    </div>
+                    <p class="section-resume-item__descr">Программное обеспечение информационных технологий,
+                        Программист-технолог</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section id="portf" class="hidden section section_bgc_dark section_color_fff">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div class="section_animation-2">
+                    <h2 class="section__title ">Портфолио</h2>
+                    <div class="section__descr ">Мои последние работы</div>
+                    <div class="section__separator section_bgc_e7"></div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 margin_bottom_15 section_animation-1">
+                <div class="section-portfolio-item">
+                    <div class="section-portfolio-item-wrap ">
+                        <h3 class="title_text">Заголовок работы</h3>
+                        <p class="section-portfolio-item-wrap__decr">Описание работы</p>
+                        <a href="#"
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color popup_content">Посмотреть</a>
+                    </div>
+                    <div class="hidden">
+                        <div class="section-portfolio-item-decr">
+                            <h3 class="title_text">Заголовок работы</h3>
+                            <p class="section-portfolio-item-decr__decr">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. A dolor eos facere, labore mollitia nostrum perferendis quaerat qui
+                                quod sunt velit vitae. Alias, enim quia!</p>
+                            <img class="section-portfolio-item-decr__img" src="img/bg2.jpg" alt="Работа">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 margin_bottom_15 section_animation-1">
+                <div class="section-portfolio-item">
+                    <div class="section-portfolio-item-wrap ">
+                        <h3 class="title_text">Заголовок работы</h3>
+                        <p class="section-portfolio-item-wrap__decr">Описание работы</p>
+                        <a href="#"
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color popup_content">Посмотреть</a>
+                    </div>
+                    <div class="hidden">
+                        <div class="section-portfolio-item-decr">
+                            <h3 class="title_text">Заголовок работы</h3>
+                            <p class="section-portfolio-item-decr__decr">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. A dolor eos facere, labore mollitia nostrum perferendis quaerat qui
+                                quod sunt velit vitae. Alias, enim quia!</p>
+                            <img class="section-portfolio-item-decr__img" src="img/bg2.jpg" alt="Работа">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 margin_bottom_15 section_animation-3">
+                <div class="section-portfolio-item">
+                    <div class="section-portfolio-item-wrap ">
+                        <h3 class="title_text">Заголовок работы</h3>
+                        <p class="section-portfolio-item-wrap__decr">Описание работы</p>
+                        <a href="#"
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color popup_content">Посмотреть</a>
+                    </div>
+                    <div class="hidden">
+                        <div class="section-portfolio-item-decr">
+                            <h3 class="title_text">Заголовок работы</h3>
+                            <p class="section-portfolio-item-decr__decr">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. A dolor eos facere, labore mollitia nostrum perferendis quaerat qui
+                                quod sunt velit vitae. Alias, enim quia!</p>
+                            <img class="section-portfolio-item-decr__img" src="img/bg2.jpg" alt="Работа">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 margin_bottom_15 section_animation-3">
+                <div class="section-portfolio-item">
+                    <div class="section-portfolio-item-wrap ">
+                        <h3 class="title_text">Заголовок работы</h3>
+                        <p class="section-portfolio-item-wrap__decr">Описание работы</p>
+                        <a href="#"
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color popup_content">Посмотреть</a>
+                    </div>
+                    <div class="hidden">
+                        <div class="section-portfolio-item-decr">
+                            <h3 class="title_text">Заголовок работы</h3>
+                            <p class="section-portfolio-item-decr__decr">Lorem ipsum dolor sit amet, consectetur
+                                adipisicing elit. A dolor eos facere, labore mollitia nostrum perferendis quaerat qui
+                                quod sunt velit vitae. Alias, enim quia!</p>
+                            <img class="section-portfolio-item-decr__img" src="img/bg2.jpg" alt="Работа">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
 </section>
@@ -130,20 +324,43 @@
         <div class="row">
             <div class="col">
                 <div class="section__wrapper">
-                    <h2 class="section__title">Контакты</h2>
-                    <div class="section__descr">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla!</div>
-                    <div class="section__separator"></div>
+                    <h2 class="section__title section__title_color">Контакты</h2>
+                    <div class="section__descr section__descr_color">Lorem ipsum dolor sit amet, consectetur adipisicing
+                        elit. Architecto, nulla!
+                    </div>
+                    <div class="section__separator section_bgc_theme"></div>
                 </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6"></div>
+            <div class="col-6">
+
             </div>
         </div>
     </div>
 </section>
 <footer class="foot foot_bg_dark foot_color_fff">
     <div class="container">
-        <div class="col-12">
+        <div class="row">
+        <div class="col-6">
             <div class="foot__content">
                 &copy; 2018 Чобанюк Иван
             </div>
+        </div>
+            <div class="col-6">
+                <div class="section-person-social">
+                <ul class="section-person-social_align-right">
+                    <li class="section-person-social__item"><a class="foot-social_color_brght" href="https://www.linkedin.com/"><i
+                            class="fab fa-linkedin"></i></a></li>
+                    <li class="section-person-social__item"><a class="foot-social_color_brght"href="https://vk.com/"><i class="fab fa-vk"></i></a>
+                    </li>
+                    <li class="section-person-social__item"><a class="foot-social_color_brght"href="https://github.com/"><i
+                            class="fab fa-github"></i></a></li>
+                </ul>
+            </div>
+            </div>
+
         </div>
     </div>
 </footer>

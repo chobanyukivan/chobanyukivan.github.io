@@ -1,10 +1,48 @@
+.section__title_color {
+  color: #4d4338; }
+
+.section__descr_color {
+  color: #4d4338; }
+
+.title_h3_color {
+  color: #987e6e; }
+
+.title_h3_tecnology_color {
+  color: #ddd2cc; }
+
+.section_bgc_theme {
+  background-color: #4e3c38; }
+
+.section_bgc_e7 {
+  background-color: #e7e7e7; }
+
+.section_bgc_dark {
+  background-color: #222222; }
+
+.section_color_fff {
+  color: #ffffff; }
+
+.section-portfolio-item-wrap__button_color, .section-portfolio-item-wrap__button_color:visited {
+  color: #987e6e;
+  border: 1px solid #987e6e;
+  text-decoration: none; }
+
+.section-portfolio-item-wrap__button_color:hover {
+  color: #B89C84;
+  border: 1px solid #B89C84;
+  text-decoration: none; }
+
+.foot-social_color_brght {
+  color: #987e6e; }
+
 body {
   font-family: "Raleway", sans-serif;
   font-weight: normal;
   font-size: 14px;
-  min-width: 320px;
+  overflow-x: hidden;
   position: relative;
-  line-height: 1.6; }
+  line-height: 1.6;
+  color: #3c342c; }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
@@ -13,6 +51,9 @@ body textarea:focus:required:invalid {
 body input:required:valid,
 body textarea:required:valid {
   color: green; }
+
+.hidden {
+  display: none; }
 
 header, section {
   position: relative; }
@@ -25,29 +66,6 @@ section, footer {
 
 .head_bgc_darker {
   background-color: rgba(0, 0, 0, 0.4); }
-
-.loader {
-  background: none repeat scroll 0 0 #ffffff;
-  bottom: 0;
-  height: 100%;
-  left: 0;
-  position: fixed;
-  right: 0;
-  top: 0;
-  width: 100%;
-  z-index: 9999; }
-  .loader .loader_inner {
-    background-image: url("../img/preloader.gif");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-color: #fff;
-    height: 60px;
-    width: 60px;
-    margin-top: -30px;
-    margin-left: -30px;
-    left: 50%;
-    top: 50%;
-    position: absolute; }
 
 header .button-toggle {
   width: 70px;
@@ -90,7 +108,7 @@ header .button-toggle {
   margin-bottom: 25px;
   list-style-type: none; }
   .menu-item a {
-    color: #acacac;
+    color: #4e3c38;
     display: block;
     font-size: 3em;
     text-decoration: none; }
@@ -128,23 +146,10 @@ header .button-toggle {
 .section__title, .section__descr {
   text-align: center; }
 
-.section_bgc_resum {
-  background-color: #e7e7e7; }
-
-.section_bgc_portf {
-  background-color: #222222; }
-
-.section_color_fff {
-  color: #ffffff; }
-
-div.section__separator_bgc_fff {
-  background-color: #ffffff; }
-
 .section__separator {
   height: 1px;
   width: 150px;
-  background-color: #292b2c;
-  margin: 50px auto 70px auto; }
+  margin: 40px auto; }
 
 .foot_bg_dark {
   background-color: #222222; }
@@ -152,12 +157,12 @@ div.section__separator_bgc_fff {
 .foot_color_fff {
   color: #ffffff; }
 
-.title_text_modification {
-  text-align: center;
+.title_text {
   font-size: 14px;
   text-transform: uppercase;
-  font-weight: 700;
-  margin-bottom: 30px; }
+  font-weight: 400;
+  margin-bottom: 30px;
+  letter-spacing: 1.5px; }
 
 .section-photo {
   text-align: center;
@@ -170,6 +175,9 @@ div.section__separator_bgc_fff {
 .section-about__content {
   margin: 25px 0; }
 
+.section-about__title {
+  text-align: center; }
+
 .section-person {
   margin-bottom: 35px; }
 
@@ -181,15 +189,146 @@ div.section__separator_bgc_fff {
   text-transform: uppercase;
   margin-bottom: 30px; }
 
-.section-person-social ul {
-  list-style: none;
+.section-person-social_margin-top {
   margin-top: 25px; }
+
+.section-person__content a {
+  color: #4e3c38; }
+
+.section-person__content a:hover {
+  color: #987e6e; }
 
 .section-person-social__item {
   display: inline-block;
   font-size: 2em;
   margin-right: 15px; }
 
+.section-person-social__item_color_theme {
+  color: #4e3c38; }
+
+.section-tecnology-item__title {
+  padding: 15px; }
+
 .section-person__content li {
   list-style: none;
   margin-bottom: 15px; }
+
+.section-resume_ta_right {
+  text-align: right;
+  border-right: #4e3c38 solid 1px; }
+
+.section-resume_ta_left {
+  text-align: left; }
+
+.section-resume__title {
+  margin: 10px; }
+
+.section-resume__logo {
+  font-size: 2em;
+  margin: 0 8px;
+  color: #7A7A7A; }
+
+.section-resume-item {
+  margin-top: 30px; }
+
+.section_bgc_blue {
+  background-color: #889EDB; }
+
+.section-resume-item__year {
+  padding: 0 10px;
+  display: inline-block;
+  color: #F3F3F3;
+  font-weight: 700;
+  margin-bottom: 5px; }
+
+.section-resume-item__place, .section-resume-item__position {
+  display: inline-block; }
+
+.section-resume-item__position_vertical_align {
+  vertical-align: top;
+  line-height: 57px; }
+
+.section-resume-item__place {
+  margin: 10px 15px 10px 0;
+  font-weight: 500;
+  font-size: 12px; }
+
+.section-resume-item__descr {
+  font-size: 16px; }
+
+.section-resume-item__position {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin: 10px 0; }
+
+.section-portfolio-item {
+  background-image: url("../img/bg2.jpg");
+  width: 100%;
+  height: 180px;
+  background-size: cover;
+  text-align: center; }
+
+.section-portfolio-item-wrap:hover {
+  opacity: 1; }
+
+.margin_bottom_15 {
+  margin-bottom: 15px; }
+
+.section-portfolio-item-wrap {
+  background-color: rgba(0, 0, 0, 0.6);
+  height: 100%;
+  padding: 10%;
+  opacity: 0;
+  transition: all .25s; }
+
+.section-portfolio-item-wrap__decr {
+  color: #d3d3d3; }
+
+.section-portfolio-item-wrap__button {
+  background-color: transparent;
+  padding: 2px 10px; }
+
+.section-portfolio-item-decr {
+  background-color: #fff;
+  max-width: 500px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  color: #4e3c38; }
+
+.section-portfolio-item-decr__decr {
+  color: #3c342c; }
+
+.section-portfolio-item-decr__img {
+  width: 100%; }
+
+.section-person-social_align-right {
+  justify-content: right;
+  display: flex;
+  margin: 0; }
+
+.section-tecnology-item {
+  width: 100%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px; }
+
+.section-tecnology-item_bg_image:nth-child(1) .section-tecnology-item {
+  background-image: url("../img/tecnology/last-pic-1.png"); }
+
+.section-tecnology-item_bg_image:nth-child(2) .section-tecnology-item {
+  background-image: url("../img/tecnology/last-pic-2.png"); }
+
+.section-tecnology-item_bg_image:nth-child(3) .section-tecnology-item {
+  background-image: url("../img/tecnology/last-pic-3.png"); }
+
+.section-tecnology-item_bg_image:nth-child(4) .section-tecnology-item {
+  background-image: url("../img/tecnology/last-pic-4.png"); }
+
+.section-tecnology-item_bg_image:nth-child(5) .section-tecnology-item {
+  background-image: url("../img/tecnology/last-pic-5.png"); }
+
+.section-tecnology-item_bg_image:nth-child(6) .section-tecnology-item {
+  background-image: url("../img/tecnology/last-pic-6.png"); }
