@@ -22,11 +22,11 @@
   transition: transform 0.5s, top 0.2s;
   transition-delay: 0.2s, 0s; }
 
-.button-toggle-sandwich.button-toggle-sandwich__active .button-toggle-sandwich__sw-topper {
+.button-toggle-sandwich.button-toggle-sandwich_active .button-toggle-sandwich__sw-topper {
   position: relative;
   top: 7px;
   transform: rotate(140deg); }
 
-.button-toggle-sandwich.button-toggle-sandwich__active .button-toggle-sandwich__sw-bottom {
+.button-toggle-sandwich.button-toggle-sandwich_active .button-toggle-sandwich__sw-bottom {
   top: 3px;
   transform: rotate(-140deg); }

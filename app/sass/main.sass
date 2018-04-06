@@ -14,26 +14,19 @@ $titleh3colorTecnology: #ddd2cc
 //модификаторы заголовков
 .section__title_color
   color: $titleh1color
-
 .section__descr_color
   color: $titleh1color
-
 .title_h3_color
   color: $titleh3color
-
 .title_h3_tecnology_color
   color: $titleh3colorTecnology
-
 //модификаторы секций
 .section_bgc_theme
   background-color: $themecolor
-
 .section_bgc_e7
   background-color: #e7e7e7
-
 .section_bgc_dark
   background-color: #222222
-
 .section_color_fff
   color: #ffffff
 //модификаторы элементов
@@ -75,9 +68,10 @@ section, footer
 
 .head
   height: 100vh
-
-.head_bgc_darker
-  background-color: rgba(0, 0, 0, 0.4)
+  background: url("../img/bg2.jpg") no-repeat fixed top center
+  background-size: cover
+  &_bgc_darker
+    background-color: rgba(0, 0, 0, 0.4)
 
 header .button-toggle
   width: 70px
@@ -129,6 +123,7 @@ header .button-toggle
       transition: 1s
       background-color: rgba(255, 255, 255, .1)
 
+
 .content-wrapper
   height: 100vh
   color: #e8e8e8
@@ -155,7 +150,7 @@ header .button-toggle
 .section_bgc_about, .section_bgc_contacts
   background-color: #fafafa
 
-.section__title, .section__descr
+.section_text-align-center
   text-align: center
 
 .section__separator
@@ -201,8 +196,9 @@ header .button-toggle
   text-transform: uppercase
   margin-bottom: 30px
 
-.section-person-social_margin-top
+.section-person-social_margin-padding
   margin-top: 25px
+  padding: 0
 
 .section-person__content a
   color: $themecolor

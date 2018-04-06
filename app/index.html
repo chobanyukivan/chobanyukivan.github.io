@@ -2,23 +2,25 @@
 <html>
 <head>
     <meta charset="utf-8"/>
-    <title>Заголовок</title>
-
-    <!--<link rel="shortcut icon" href="favicon.png"/>-->
-    <link rel="stylesheet" href="libs/bootstrap/css/bootstrap-grid.min.css"/>
+    <title>Чобанюк Иван</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <!--<meta content="" name="description"/>-->
+    <!--<meta content="" property="og:image"/>-->
+    <!--<meta content="" property="og:description"/>-->
+    <!--<meta content="" property="og:site_name"/>-->
+    <!--<meta content="website" property="og:type"/>-->
+    <!--<meta content="telephone=no" name="format-detection"/>-->
     <link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="libs/fontawesome/css/fontawesome-all.css"/>
-    <link rel="stylesheet" href="libs/magnific-popup/magnific-popup.css"/>
     <link rel="stylesheet" href="libs/animate/animate.min.css"/>
     <link rel="stylesheet" href="libs/preloader/preloader.css"/>
-    <link rel="stylesheet" href="libs/parallax/parallax.min.js"/>
     <link rel="stylesheet" href="css/styles.css"/>
 </head>
 <body>
 <div class="loader">
     <div class="loader_inner"></div>
 </div>
-<header id="head" class="head head_bgc_darker" data-parallax="scroll" data-image-src="/app/img/bg2.jpg">
+<header id="head" class="head head_bgc_darker">
     <div class="container">
         <div class="row justify-content-end">
             <div class="col-1">
@@ -31,11 +33,10 @@
                 <div class="row align-items-center">
                     <nav class="menu">
                         <div class="menu-wrapper">
-                            <ul>
-                                <li class="menu-item"><a href="#about">Обо мне</a></li>
-                                <li class="menu-item"><a href="#resum">Резюме</a></li>
+                            <ul class="menu-wrapper__ul" >
+                                <li class="menu-item"><a  href="#about">Обо мне</a></li>
+                                <li class="menu-item"><a class="scroll_2" href="#resum">Резюме</a></li>
                                 <li class="menu-item"><a href="#portf">Портфолио</a></li>
-                                <li class="menu-item"><a href="#contacts">Контакты</a></li>
                             </ul>
                         </div>
                     </nav>
@@ -45,8 +46,8 @@
         <div class="row">
             <div class="col">
                 <div class="content-wrapper">
-                    <h1 class="content-wrapper__name">Чобанюк Иван</h1>
-                    <p class="content-wrapper__dscr">HTML-верстальщик, Front-end разработчик</p>
+                    <h1 class="content-wrapper__name section_animation-2">Чобанюк Иван</h1>
+                    <p class="content-wrapper__dscr section_animation-2">HTML-верстальщик, Front-end разработчик</p>
                 </div>
             </div>
         </div>
@@ -57,7 +58,7 @@
         <div class="row">
             <div class="col-12">
                 <div class="section__wrapper">
-                    <h2 class="section__title section__title_color">Обо мне</h2>
+                    <h2 class="section_text-align-center section__title_color">Обо мне</h2>
                     <div class="section__separator section_bgc_theme"></div>
                 </div>
             </div>
@@ -78,12 +79,12 @@
             <div class="col-12 col-md-6 col-lg-4 col_flex-md-order-1">
                 <div class="section-photo section_animation-2">
                     <h3 class="section-photo__title title_text title_h3_color">Фото</h3>
-                    <a href="img/IMG_3976.jpg" class="popup"><img class="section-photo__img" src="img/IMG_3976.jpg"
-                                                                  alt="Чобанюк И.С."></a>
+                    <img class="section-photo__img" src="img/IMG_3976.jpg"
+                                                                  alt="Чобанюк И.С.">
                 </div>
             </div>
             <div class="col-12 col-md-6 col-lg-4 col_flex-md-order-2">
-                <div class="section-person section-person_textalign-center section_animation-3">
+                <div class="section-person section_text-align-center section_animation-3">
                     <h3 class="section-person__title title_text title_h3_color">Персональная информация</h3>
                     <h2 class="section-person__name">Чобанюк Иван</h2>
                     <ul class="section-person__content">
@@ -92,7 +93,7 @@
                         <li>E-mail: <a href="mailto:chobanyuk.ivan@gmail.com">chobanyuk.ivan@gmail.com</a></li>
                     </ul>
                     <div class="section-person-social">
-                        <ul class="section-person-social_margin-top">
+                        <ul class="section-person-social_margin-padding">
                             <li class="section-person-social__item"><a class="section-person-social__item_color_theme" href="https://www.linkedin.com/"><i
                                     class="fab fa-linkedin"></i></a></li>
                             <li class="section-person-social__item"><a class="section-person-social__item_color_theme" href="https://vk.com/"><i class="fab fa-vk"></i></a>
@@ -138,15 +139,14 @@
         </div>
     </div>
 </section>
-
 <section id="resum" class="section section_bgc_e7">
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="section__wrapper">
-                    <h2 class="section__title section__title_color">Резюме</h2>
+                    <h2 class="section_text-align-center section__title_color">Резюме</h2>
                     <!--todo определить наполнение
-                    <div class="section__descr section__descr_color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla!</div>-->
+                    <div class="section_text-align-center section__descr_color">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, nulla!</div>-->
                     <div class="section__separator section_bgc_theme"></div>
                 </div>
             </div>
@@ -232,8 +232,8 @@
         <div class="row">
             <div class="col">
                 <div class="section_animation-2">
-                    <h2 class="section__title ">Портфолио</h2>
-                    <div class="section__descr ">Мои последние работы</div>
+                    <h2 class="section_text-align-center ">Портфолио</h2>
+                    <div class="section_text-align-center ">Мои последние работы</div>
                     <div class="section__separator section_bgc_e7"></div>
                 </div>
             </div>
@@ -244,17 +244,7 @@
                     <div class="section-portfolio-item-wrap ">
                         <h3 class="title_text">Заголовок работы</h3>
                         <p class="section-portfolio-item-wrap__decr">Описание работы</p>
-                        <a href="#"
-                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color popup_content">Посмотреть</a>
-                    </div>
-                    <div class="hidden">
-                        <div class="section-portfolio-item-decr">
-                            <h3 class="title_text">Заголовок работы</h3>
-                            <p class="section-portfolio-item-decr__decr">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. A dolor eos facere, labore mollitia nostrum perferendis quaerat qui
-                                quod sunt velit vitae. Alias, enim quia!</p>
-                            <img class="section-portfolio-item-decr__img" src="img/bg2.jpg" alt="Работа">
-                        </div>
+                        <a href="#" class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color">Посмотреть</a>
                     </div>
                 </div>
             </div>
@@ -264,16 +254,7 @@
                         <h3 class="title_text">Заголовок работы</h3>
                         <p class="section-portfolio-item-wrap__decr">Описание работы</p>
                         <a href="#"
-                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color popup_content">Посмотреть</a>
-                    </div>
-                    <div class="hidden">
-                        <div class="section-portfolio-item-decr">
-                            <h3 class="title_text">Заголовок работы</h3>
-                            <p class="section-portfolio-item-decr__decr">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. A dolor eos facere, labore mollitia nostrum perferendis quaerat qui
-                                quod sunt velit vitae. Alias, enim quia!</p>
-                            <img class="section-portfolio-item-decr__img" src="img/bg2.jpg" alt="Работа">
-                        </div>
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color">Посмотреть</a>
                     </div>
                 </div>
             </div>
@@ -283,16 +264,7 @@
                         <h3 class="title_text">Заголовок работы</h3>
                         <p class="section-portfolio-item-wrap__decr">Описание работы</p>
                         <a href="#"
-                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color popup_content">Посмотреть</a>
-                    </div>
-                    <div class="hidden">
-                        <div class="section-portfolio-item-decr">
-                            <h3 class="title_text">Заголовок работы</h3>
-                            <p class="section-portfolio-item-decr__decr">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. A dolor eos facere, labore mollitia nostrum perferendis quaerat qui
-                                quod sunt velit vitae. Alias, enim quia!</p>
-                            <img class="section-portfolio-item-decr__img" src="img/bg2.jpg" alt="Работа">
-                        </div>
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color">Посмотреть</a>
                     </div>
                 </div>
             </div>
@@ -302,32 +274,61 @@
                         <h3 class="title_text">Заголовок работы</h3>
                         <p class="section-portfolio-item-wrap__decr">Описание работы</p>
                         <a href="#"
-                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color popup_content">Посмотреть</a>
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color">Посмотреть</a>
                     </div>
-                    <div class="hidden">
-                        <div class="section-portfolio-item-decr">
-                            <h3 class="title_text">Заголовок работы</h3>
-                            <p class="section-portfolio-item-decr__decr">Lorem ipsum dolor sit amet, consectetur
-                                adipisicing elit. A dolor eos facere, labore mollitia nostrum perferendis quaerat qui
-                                quod sunt velit vitae. Alias, enim quia!</p>
-                            <img class="section-portfolio-item-decr__img" src="img/bg2.jpg" alt="Работа">
-                        </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 margin_bottom_15 section_animation-1">
+                <div class="section-portfolio-item">
+                    <div class="section-portfolio-item-wrap ">
+                        <h3 class="title_text">Заголовок работы</h3>
+                        <p class="section-portfolio-item-wrap__decr">Описание работы</p>
+                        <a href="#" class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 margin_bottom_15 section_animation-1">
+                <div class="section-portfolio-item">
+                    <div class="section-portfolio-item-wrap ">
+                        <h3 class="title_text">Заголовок работы</h3>
+                        <p class="section-portfolio-item-wrap__decr">Описание работы</p>
+                        <a href="#"
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 margin_bottom_15 section_animation-3">
+                <div class="section-portfolio-item">
+                    <div class="section-portfolio-item-wrap ">
+                        <h3 class="title_text">Заголовок работы</h3>
+                        <p class="section-portfolio-item-wrap__decr">Описание работы</p>
+                        <a href="#"
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color">Посмотреть</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3 margin_bottom_15 section_animation-3">
+                <div class="section-portfolio-item">
+                    <div class="section-portfolio-item-wrap ">
+                        <h3 class="title_text">Заголовок работы</h3>
+                        <p class="section-portfolio-item-wrap__decr">Описание работы</p>
+                        <a href="#"
+                           class="section-portfolio-item-wrap__button section-portfolio-item-wrap__button_color">Посмотреть</a>
                     </div>
                 </div>
             </div>
 
+
         </div>
     </div>
 </section>
-<section id="contacts" class="section section_bgc_contacts">
+<section id="contacts" class="hidden section section_bgc_contacts">
     <div class="container">
         <div class="row">
             <div class="col">
                 <div class="section__wrapper">
-                    <h2 class="section__title section__title_color">Контакты</h2>
-                    <div class="section__descr section__descr_color">Lorem ipsum dolor sit amet, consectetur adipisicing
-                        elit. Architecto, nulla!
-                    </div>
+                    <h2 class="section_text-align-center section__title_color">Контакты</h2>
+                    <div class="section_text-align-center section__descr_color">Lorem ipsum</div>
                     <div class="section__separator section_bgc_theme"></div>
                 </div>
             </div>
@@ -348,14 +349,14 @@
                 &copy; 2018 Чобанюк Иван
             </div>
         </div>
-            <div class="col-6">
+            <div class="col-6 col-sm-5 col-md-4 col-lg-3 offset-sm-1 offset-md-2 offset-lg-3">
                 <div class="section-person-social">
-                <ul class="section-person-social_align-right">
+                <ul class="section-person-social_margin0">
                     <li class="section-person-social__item"><a class="foot-social_color_brght" href="https://www.linkedin.com/"><i
                             class="fab fa-linkedin"></i></a></li>
-                    <li class="section-person-social__item"><a class="foot-social_color_brght"href="https://vk.com/"><i class="fab fa-vk"></i></a>
+                    <li class="section-person-social__item"><a class="foot-social_color_brght" href="https://vk.com/"><i class="fab fa-vk"></i></a>
                     </li>
-                    <li class="section-person-social__item"><a class="foot-social_color_brght"href="https://github.com/"><i
+                    <li class="section-person-social__item"><a class="foot-social_color_brght" href="https://github.com/"><i
                             class="fab fa-github"></i></a></li>
                 </ul>
             </div>
@@ -365,15 +366,10 @@
     </div>
 </footer>
 </body>
-
 <script src="libs/jquery/jquery-2.1.3.min.js"></script>
-<script src="libs/parallax/parallax.min.js"></script>
-<script src="libs/magnific-popup/jquery.magnific-popup.min.js"></script>
-<script src="libs/mixitup/mixitup.min.js"></script>
 <script src="libs/scroll2id/PageScroll2id.min.js"></script>
 <script src="libs/waypoints/waypoints.min.js"></script>
 <script src="libs/animate/animate-css.js"></script>
-<script src="libs/jqBootstrapValidation/jqBootstrapValidation.js"></script>
 <script src="js/common.js"></script>
 
 

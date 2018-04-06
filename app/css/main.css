@@ -62,10 +62,11 @@ section, footer {
   padding: 50px 0; }
 
 .head {
-  height: 100vh; }
-
-.head_bgc_darker {
-  background-color: rgba(0, 0, 0, 0.4); }
+  height: 100vh;
+  background: url("../img/bg2.jpg") no-repeat fixed top center;
+  background-size: cover; }
+  .head_bgc_darker {
+    background-color: rgba(0, 0, 0, 0.4); }
 
 header .button-toggle {
   width: 70px;
@@ -143,7 +144,7 @@ header .button-toggle {
 .section_bgc_about, .section_bgc_contacts {
   background-color: #fafafa; }
 
-.section__title, .section__descr {
+.section_text-align-center {
   text-align: center; }
 
 .section__separator {
@@ -189,8 +190,9 @@ header .button-toggle {
   text-transform: uppercase;
   margin-bottom: 30px; }
 
-.section-person-social_margin-top {
-  margin-top: 25px; }
+.section-person-social_margin-padding {
+  margin-top: 25px;
+  padding: 0; }
 
 .section-person__content a {
   color: #4e3c38; }
