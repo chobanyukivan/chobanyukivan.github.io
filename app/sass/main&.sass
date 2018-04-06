@@ -12,41 +12,41 @@ $titleh3colorTecnology: #ddd2cc
 //$textcolor: #313334
 
 //модификаторы заголовков
-.section__title_color
-  color: $titleh1color
+.section
+  &__title_color
+    color: $titleh1color
+  &__descr_color
+    color: $titleh1color
 
-.section__descr_color
-  color: $titleh1color
-
-.title_h3_color
-  color: $titleh3color
-
-.title_h3_tecnology_color
-  color: $titleh3colorTecnology
+.title
+  &_h3_color
+    color: $titleh3color
+  &_h3_tecnology_color
+    color: $titleh3colorTecnology
 //модификаторы секций
-.section_bgc_theme
-  background-color: $themecolor
-
-.section_bgc_e7
-  background-color: #e7e7e7
-
-.section_bgc_dark
-  background-color: #222222
-.section_bgc_blue
-  background-color: #889EDB
-
-.section_color_fff
-  color: #ffffff
+.section
+  &_bgc_theme
+    background-color: $themecolor
+  &_bgc_e7
+    background-color: #e7e7e7
+  &_bgc_dark
+    background-color: #222222
+  &_bgc_blue
+    background-color: #889EDB
+  &_color_fff
+    color: #ffffff
 //модификаторы элементов
-.section-portfolio-item-wrap__button_color, .section-portfolio-item-wrap__button_color:visited
-  color: $titleh3color
-  border: 1px solid $titleh3color
-  text-decoration: none
-
-.section-portfolio-item-wrap__button_color:hover
-  color: #B89C84
-  border: 1px solid #B89C84
-  text-decoration: none
+.section
+  &-portfolio-item-wrap
+    &__button_color
+      &:hover
+        color: #B89C84
+        border: 1px solid #B89C84
+        text-decoration: none
+      &, &:visited
+        color: $titleh3color
+        border: 1px solid $titleh3color
+        text-decoration: none
 
 .foot-social_color_brght
   color: $titleh3color
@@ -193,26 +193,30 @@ header .button-toggle
       & a:hover
         color: #987e6e
   &-tecnology
-    &-item
-      width: 100%
-      height: 150px
+    &-wrap
       display: flex
-      align-items: center
-      margin-bottom: 5px
-      &__title
-        padding: 15px
-      &_bg_image:nth-child(1) &
-        background-image: url("../img/tecnology/last-pic-1.png")
-      &_bg_image:nth-child(2) &
-        background-image: url("../img/tecnology/last-pic-2.png")
-      &_bg_image:nth-child(3) &
-        background-image: url("../img/tecnology/last-pic-3.png")
-      &_bg_image:nth-child(4) &
-        background-image: url("../img/tecnology/last-pic-4.png")
-      &_bg_image:nth-child(5) &
-        background-image: url("../img/tecnology/last-pic-5.png")
-      &_bg_image:nth-child(6) &
-        background-image: url("../img/tecnology/last-pic-6.png")
+      flex-wrap: wrap
+      &-item
+        width: 32%
+        height: 150px
+        margin: 5px
+        display: flex
+        &:nth-child(1)
+          background-image: url("../img/tecnology/last-pic-1.png")
+        &:nth-child(2)
+          background-image: url("../img/tecnology/last-pic-2.png")
+        &:nth-child(3)
+          background-image: url("../img/tecnology/last-pic-3.png")
+        &:nth-child(4)
+          background-image: url("../img/tecnology/last-pic-4.png")
+        &:nth-child(5)
+          background-image: url("../img/tecnology/last-pic-5.png")
+        &:nth-child(6)
+          background-image: url("../img/tecnology/last-pic-6.png")
+        &__title
+          padding: 15px
+          align-self: center
+
   &-resume
     &-item
       margin-top: 30px

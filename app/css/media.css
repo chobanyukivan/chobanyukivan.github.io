@@ -4,10 +4,16 @@
   .col_flex-md-order-2 {
     order: 2; }
   .col_flex-md-order-3 {
-    order: 3; } }
+    order: 3; }
+  .section-tecnology-wrap-item {
+    width: 48%; } }
 
 @media only screen and (max-width: 768px) {
   .section-resume_ta_right {
     border: none; }
   .section-resume_ta_center {
     text-align: center; } }
+
+@media only screen and (max-width: 576px) {
+  .section-tecnology-wrap-item {
+    width: 100%; } }

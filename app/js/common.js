@@ -1,6 +1,6 @@
 $(document).ready(function () {
     $(".button-toggle, .menu-item").click(function () {
-        $(".button-toggle-sandwich").toggleClass("button-toggle-sandwich__active");
+        $(".button-toggle-sandwich").toggleClass("button-toggle-sandwich_active");
         $(".menu").slideToggle();
     });
 
