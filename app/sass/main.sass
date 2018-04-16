@@ -3,7 +3,7 @@ $themecolor: #4e3c38
 $titleh1color: #4d4338
 $titleh3color: #987e6e
 $textcolor: #3c342c
-$titleh3colorTecnology: #ddd2cc
+$titleh3colorTecnology: #ddd2ca
 
 //синяя тема
 //$themecolor: #889EDB
@@ -12,34 +12,45 @@ $titleh3colorTecnology: #ddd2cc
 //$textcolor: #313334
 
 //модификаторы заголовков
-.section__title_color
-  color: $titleh1color
-.section__descr_color
-  color: $titleh1color
-.title_h3_color
-  color: $titleh3color
-.title_h3_tecnology_color
-  color: $titleh3colorTecnology
+.section
+  &__title_color
+    color: $titleh1color
+  &__descr_color
+    color: $titleh1color
+
+.title
+  &_h3_color
+    color: $titleh3color
+  &_h3_tecnology_color
+    color: $titleh3colorTecnology
 //модификаторы секций
-.section_bgc_theme
-  background-color: $themecolor
-.section_bgc_e7
-  background-color: #e7e7e7
-.section_bgc_dark
-  background-color: #222222
-.section_color_fff
-  color: #ffffff
+.section
+  &_bgc_theme
+    background-color: $themecolor
+  &_bgc_e7
+    background-color: #e7e7e7
+  &_bgc_dark
+    background-color: #222222
+  &_bgc_blue
+    background-color: #889EDB
+  &_color_fff
+    color: #ffffff
 //модификаторы элементов
-.section-portfolio-item-wrap__button_color, .section-portfolio-item-wrap__button_color:visited
-  color: $titleh3color
-  border: 1px solid $titleh3color
-  text-decoration: none
-.section-portfolio-item-wrap__button_color:hover
-  color: #B89C84
-  border: 1px solid #B89C84
-  text-decoration: none
+.section
+  &-portfolio-item-wrap
+    &__button_color
+      &:hover
+        color: #B89C84
+        border: 1px solid #B89C84
+        text-decoration: none
+      &, &:visited
+        color: $titleh3color
+        border: 1px solid $titleh3color
+        text-decoration: none
+
 .foot-social_color_brght
   color: $titleh3color
+
 body
   font-family: "Raleway", sans-serif
   font-weight: normal
@@ -68,7 +79,7 @@ section, footer
 
 .head
   height: 100vh
-  background: url("../img/bg2.jpg") no-repeat fixed top center
+  background: url("../img/bg2.jpg") no-repeat top center
   background-size: cover
   &_bgc_darker
     background-color: rgba(0, 0, 0, 0.4)
@@ -98,31 +109,29 @@ header .button-toggle
   background-color: rgba(0, 0, 0, .8)
   display: none
   z-index: 10
-  .menu-wrapper
+  &-wrapper
     display: flex
     justify-content: center
     align-items: center
     height: 100%
-
-.menu-item, ul
-  margin: 0
-  padding: 0
-  width: 100%
-
-.menu-item
-  text-align: center
-  margin-bottom: 25px
-  list-style-type: none
-  a
-    color: $themecolor
-    display: block
-    font-size: 3em
-    text-decoration: none
-    &:hover
-      color: #ffffff
-      transition: 1s
-      background-color: rgba(255, 255, 255, .1)
-
+    &__ul
+      margin: 0
+      padding: 0
+      width: 100%
+  &-item
+    text-align: center
+    margin-bottom: 25px
+    list-style-type: none
+    a
+      color: $titleh3color
+      display: block
+      font-size: 3em
+      text-decoration: none
+      &:hover
+        color: #ffffff
+        transition: 1s
+        background-color: rgba(255, 255, 255, .1)
+        text-decoration: none
 
 .content-wrapper
   height: 100vh
@@ -132,37 +141,186 @@ header .button-toggle
   justify-content: center
   align-items: center
   z-index: 10
+  &__name
+    border: 0.15em solid #e8e8e8
+    padding: 16px 32px
+    text-transform: uppercase
+    font-size: 2.8em
+    text-align: center
+    font-weight: 500
+    animation-delay: 1s
+  &__dscr
+    font-size: 1.5em
+    text-align: center
+    animation-delay: 1.5s
 
-.content-wrapper__name
-  border: 0.15em solid #e8e8e8
-  padding: 16px 32px
-  text-transform: uppercase
-  font-size: 2.8em
-  text-align: center
-  font-weight: 500
-  animation-delay: 1s
+.section
+  &-photo
+    text-align: center
+    margin-bottom: 35px
+    &__img
+      max-width: 255px
+      border-radius: 50%
+  &-about
+    &__content
+      margin: 25px 0
+    &__title
+      text-align: center
+  &-person
+    margin-bottom: 35px
+    &-social
+      &__item
+        display: inline-block
+        font-size: 2em
+        margin-right: 15px
+        &_color_theme
+          color: $themecolor
+      &_margin-padding
+        margin-top: 25px
+        padding: 0
+      &_margin0
+        margin: 0
+    &__name
+      font-size: 20px
+      text-transform: uppercase
+      margin-bottom: 30px
+    &__content
+      padding: 0
+      & li
+        list-style: none
+        margin-bottom: 15px
+      & a
+        color: $themecolor
+      & a:hover
+        color: #987e6e
+  &-tecnology
+    &-wrap
+      display: flex
+      flex-wrap: wrap
+      &-item
+        width: 32%
+        height: 150px
+        margin: 5px
+        display: flex
+        transition: all 0.5s linear
+        &:hover
+          //todo не работает transform
+          transform: scale(1.6)
+          transition: all 0.5s linear
+          border-radius: 25px
+        &:nth-child(1)
+          background-image: url("../img/tecnology/last-pic-1.png")
+        &:nth-child(2)
+          background-image: url("../img/tecnology/last-pic-2.png")
+        &:nth-child(3)
+          background-image: url("../img/tecnology/last-pic-3.png")
+        &:nth-child(4)
+          background-image: url("../img/tecnology/last-pic-4.png")
+        &:nth-child(5)
+          background-image: url("../img/tecnology/last-pic-5.png")
+        &:nth-child(6)
+          background-image: url("../img/tecnology/last-pic-6.png")
+        &__title
+          padding: 15px
+          align-self: center
 
-.content-wrapper__dscr
-  font-size: 1.5em
-  text-align: center
-  animation-delay: 1.5s
+  &-resume
+    &-item
+      margin-top: 30px
+      &__year
+        padding: 0 10px
+        display: inline-block
+        color: #F3F3F3
+        font-weight: 700
+        margin-bottom: 5px
+      &__place, &__position
+        display: inline-block
+      &__position
+        font-weight: 800
+        text-transform: uppercase
+        letter-spacing: 1.5px
+        margin: 10px 0
+        &_vertical_align
+          vertical-align: top
+          line-height: 57px
+      &__place
+        margin: 10px 15px 10px 0
+        font-weight: 500
+        font-size: 12px
+      &__descr
+        font-size: 16px
+    &__title
+      margin: 10px
+    &__button
+      color: $titleh3color
+      background-color: $textcolor
+      text-align: center
+      display: block
+      justify-self: center
+      height: 35px
+      margin: 35px auto auto
+      max-width: 450px
+      line-height: 35px
+      letter-spacing: 2px
+      transition: 1s
+      &:hover
+        text-decoration: none
+        background-color: $themecolor
+        color: #e7e7e7
+        transition: 1s
+    &__logo
+      font-size: 2em
+      margin: 0 8px
+      color: #7A7A7A
+    &_ta_right
+      text-align: right
+      border-right: $themecolor solid 1px
+    &_ta_left
+      text-align: left
+  &-portfolio-item
+    background-image: url('../img/bg2.jpg')
+    width: 100%
+    height: 180px
+    background-size: cover
+    text-align: center
+    &-decr
+      background-color: #fff
+      max-width: 500px
+      margin: auto
+      text-align: center
+      padding: 20px
+      color: $themecolor
+      &__decr
+        color: $textcolor
+      &__img
+        width: 100%
+    &-wrap
+      background-color: rgba(0, 0, 0, .6)
+      height: 100%
+      padding: 10%
+      opacity: 0
+      transition: all .25s
+      &__decr
+        color: #d3d3d3
+      &__button
+        background-color: transparent
+        padding: 2px 10px
+    &-wrap:hover
+      opacity: 1
+  &_bgc_about, &_bgc_contacts
+    background-color: #fafafa
+  &_text-align-center
+    text-align: center
+  &__separator
+    height: 1px
+    width: 150px
+    margin: 40px auto
 
-.section_bgc_about, .section_bgc_contacts
-  background-color: #fafafa
-
-.section_text-align-center
-  text-align: center
-
-.section__separator
-  height: 1px
-  width: 150px
-  margin: 40px auto
-
-.foot_bg_dark
-  background-color: #222222
-
-.foot_color_fff
-  color: #ffffff
+.foot
+  &_bg_dark
+    background-color: #222222
+  &_color_fff
+    color: #ffffff
 
 .title_text
   font-size: 14px
@@ -171,161 +329,6 @@ header .button-toggle
   margin-bottom: 30px
   letter-spacing: 1.5px
 
-.section-photo
-  text-align: center
-  margin-bottom: 35px
-
-.section-photo__img
-  max-width: 255px
-  border-radius: 50%
-
-.section-about__content
-  margin: 25px 0
-
-.section-about__title
-  text-align: center
-
-.section-person
-  margin-bottom: 35px
-
-.section-person_textalign-center
-  text-align: center
-
-.section-person__name
-  font-size: 20px
-  text-transform: uppercase
-  margin-bottom: 30px
-
-.section-person-social_margin-padding
-  margin-top: 25px
-  padding: 0
-
-.section-person__content a
-  color: $themecolor
-
-.section-person__content a:hover
-  color: #987e6e
-
-.section-person-social__item
-  display: inline-block
-  font-size: 2em
-  margin-right: 15px
-
-.section-person-social__item_color_theme
-  color: $themecolor
-.section-tecnology-item__title
-  padding: 15px
-.section-person__content li
-  list-style: none
-  margin-bottom: 15px
-
-.section-resume_ta_right
-  text-align: right
-  border-right: $themecolor solid 1px
-
-.section-resume_ta_left
-  text-align: left
-
-.section-resume__title
-  margin: 10px
-
-.section-resume__logo
-  font-size: 2em
-  margin: 0 8px
-  color: #7A7A7A
-
-.section-resume-item
-  margin-top: 30px
-
-.section_bgc_blue
-  background-color: #889EDB
-
-.section-resume-item__year
-  padding: 0 10px
-  display: inline-block
-  color: #F3F3F3
-  //font-style: italic
-  font-weight: 700
-  margin-bottom: 5px
-
-.section-resume-item__place, .section-resume-item__position
-  display: inline-block
-
-.section-resume-item__position_vertical_align
-  vertical-align: top
-  line-height: 57px
-
-.section-resume-item__place
-  margin: 10px 15px 10px 0
-  font-weight: 500
-  font-size: 12px
-//font-style: italic
-.section-resume-item__descr
-  font-size: 16px
-
-.section-resume-item__position
-  font-weight: 800
-  text-transform: uppercase
-  letter-spacing: 1.5px
-  margin: 10px 0
-
-.section-portfolio-item
-  background-image: url('../img/bg2.jpg')
-  width: 100%
-  height: 180px
-  background-size: cover
-  text-align: center
-
-.section-portfolio-item-wrap:hover
-  opacity: 1
 
 .margin_bottom_15
   margin-bottom: 15px
-
-.section-portfolio-item-wrap
-  background-color: rgba(0, 0, 0, .6)
-  height: 100%
-  padding: 10%
-  opacity: 0
-  transition: all .25s
-
-.section-portfolio-item-wrap__decr
-  color: #d3d3d3
-//margin-bottom: 35px
-.section-portfolio-item-wrap__button
-  background-color: transparent
-  padding: 2px 10px
-.section-portfolio-item-decr
-  background-color: #fff
-  max-width: 500px
-  margin: auto
-  text-align: center
-  padding: 20px
-  color: $themecolor
-.section-portfolio-item-decr__decr
-  color: $textcolor
-.section-portfolio-item-decr__img
-  width: 100%
-.section-person-social_align-right
-  justify-content: right
-  display: flex
-  margin: 0
-
-.section-tecnology-item
-  width: 100%
-  height: 150px
-  display: flex
-  align-items: center
-  margin-bottom: 5px
-.section-tecnology-item_bg_image:nth-child(1) .section-tecnology-item
-  background-image: url("../img/tecnology/last-pic-1.png")
-.section-tecnology-item_bg_image:nth-child(2) .section-tecnology-item
-  background-image: url("../img/tecnology/last-pic-2.png")
-.section-tecnology-item_bg_image:nth-child(3) .section-tecnology-item
-  background-image: url("../img/tecnology/last-pic-3.png")
-.section-tecnology-item_bg_image:nth-child(4) .section-tecnology-item
-  background-image: url("../img/tecnology/last-pic-4.png")
-.section-tecnology-item_bg_image:nth-child(5) .section-tecnology-item
-  background-image: url("../img/tecnology/last-pic-5.png")
-.section-tecnology-item_bg_image:nth-child(6) .section-tecnology-item
-  background-image: url("../img/tecnology/last-pic-6.png")
