@@ -66,7 +66,7 @@ section, footer {
 
 .head {
   height: 100vh;
-  background: url("../img/bg2.jpg") no-repeat fixed top center;
+  background: url("../img/bg2.jpg") no-repeat top center;
   background-size: cover; }
   .head_bgc_darker {
     background-color: rgba(0, 0, 0, 0.4); }
@@ -110,7 +110,7 @@ header .button-toggle {
     margin-bottom: 25px;
     list-style-type: none; }
     .menu-item a {
-      color: #4e3c38;
+      color: #987e6e;
       display: block;
       font-size: 3em;
       text-decoration: none; }
@@ -187,7 +187,12 @@ header .button-toggle {
     width: 32%;
     height: 150px;
     margin: 5px;
-    display: flex; }
+    display: flex;
+    transition: all 0.5s linear; }
+    .section-tecnology-wrap-item:hover {
+      transform: scale(1.6);
+      transition: all 0.5s linear;
+      border-radius: 25px; }
     .section-tecnology-wrap-item:nth-child(1) {
       background-image: url("../img/tecnology/last-pic-1.png"); }
     .section-tecnology-wrap-item:nth-child(2) {
@@ -231,6 +236,24 @@ header .button-toggle {
 
 .section-resume__title {
   margin: 10px; }
+
+.section-resume__button {
+  color: #987e6e;
+  background-color: #4e3c38;
+  text-align: center;
+  display: block;
+  justify-self: center;
+  height: 35px;
+  margin: 35px auto auto;
+  width: 450px;
+  line-height: 35px;
+  letter-spacing: 2px;
+  transition: 1s; }
+  .section-resume__button:hover {
+    text-decoration: none;
+    background-color: #786455;
+    color: #b79a86;
+    transition: 1s; }
 
 .section-resume__logo {
   font-size: 2em;
