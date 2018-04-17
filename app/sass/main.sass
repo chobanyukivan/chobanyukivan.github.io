@@ -5,6 +5,8 @@ $titleh3color: #987e6e
 $textcolor: #3c342c
 $titleh3colorTecnology: #ddd2ca
 
+
+
 //синяя тема
 //$themecolor: #889EDB
 //$titleh1color: #606091
@@ -203,11 +205,13 @@ header .button-toggle
         margin: 5px
         display: flex
         transition: all 0.5s linear
+        filter: saturate(90%)
         &:hover
           //todo не работает transform
           transform: scale(1.6)
           transition: all 0.5s linear
-          border-radius: 25px
+          //border-radius: 25px
+          filter: saturate(450%)
         &:nth-child(1)
           background-image: url("../img/tecnology/last-pic-1.png")
         &:nth-child(2)

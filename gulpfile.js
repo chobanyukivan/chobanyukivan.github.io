@@ -10,7 +10,8 @@ var gulp 		= require('gulp'),
 	pngquant	= require("imagemin-pngquant"),
 	cache 		= require("gulp-cache"),
 	autoprefixer = require("gulp-autoprefixer"),
-	concatCss 	= require('gulp-concat-css');
+	concatCss 	= require('gulp-concat-css'),
+    htmlreplace = require('gulp-html-replace');
 
 gulp.task("sass", function(){
 	return gulp.src("app/sass/**/*.sass")
@@ -92,6 +93,11 @@ gulp.task('build', ['clean','img','sass','script-Libs', "css-libs"], function() 
 	.pipe(gulp.dest('dist/js'));
 
 	var buildHtml = gulp.src('app/*.html')
+		.pipe(htmlreplace({
+            'csslibs': 'libs/libs.min.css',
+            'css': 'css/styles.min.css',
+            'js': 'libs/libs.min.js'
+		}))
 	.pipe(gulp.dest('dist'));
 
 	var buildIco = gulp.src('app/*.png')
