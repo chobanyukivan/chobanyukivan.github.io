@@ -3,6 +3,3 @@
 /.idea/
 .gitattributes
 dist
-watch.cmd
-npm_install.cmd
-build.cmd
