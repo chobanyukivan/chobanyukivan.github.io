@@ -223,10 +223,9 @@ header .button-toggle {
     -webkit-filter: saturate(90%);
             filter: saturate(90%); }
     .section-tecnology-wrap-item:hover {
-      -webkit-transform: scale(1.6);
-              transform: scale(1.6);
       -webkit-transition: all 0.5s linear;
       transition: all 0.5s linear;
+      border-radius: 25px;
       -webkit-filter: saturate(450%);
               filter: saturate(450%); }
     .section-tecnology-wrap-item:nth-child(1) {

@@ -27,12 +27,6 @@ gulp.task('script-Libs', function(){
 	.pipe(gulp.dest('dist/libs'));
 });
 
-// gulp.task('concss', function () {
-//  return gulp.src('app/css/**/*.css')
-//    .pipe(concatCss("styles.css"))
-//    .pipe(gulp.dest('dist/css'));
-// });
-
 gulp.task("css-libs", ['sass'], function() {
 	return gulp.src("app/libs/**/*.css")
 	.pipe(concatCss("libs.css"))
@@ -69,7 +63,6 @@ gulp.task("img", function() {
 	.pipe(gulp.dest('dist/img'))
 });
 
-// gulp.task("watch", ['browsersync','css-libs', 'script-Libs'], function(){
 gulp.task("watch", ['browsersync'], function(){
 	gulp.watch("app/sass/**/*.sass",["sass"], browsersync.reload);
 	gulp.watch("app/css/**/*.css", browsersync.reload);
