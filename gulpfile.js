@@ -26,7 +26,7 @@ gulp.task("sass", function(){
 
 gulp.task("watch", function(){
     browsersync({
-        server: "app",
+        server: "dist",
         notify: false,
         // browser: ["firefox", "chrome" ]
         browser: ["firefox"]

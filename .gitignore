@@ -3,3 +3,4 @@
 /.idea/
 .gitattributes
 dist
+package-lock.json
