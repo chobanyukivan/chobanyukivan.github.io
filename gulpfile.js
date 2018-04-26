@@ -11,91 +11,94 @@ var gulp 		= require('gulp'),
 	cache 		= require("gulp-cache"),
 	autoprefixer = require("gulp-autoprefixer"),
 	concatCss 	= require('gulp-concat-css'),
+    cleancss    = require('gulp-clean-css'),
+    notify      = require("gulp-notify"),
     htmlreplace = require('gulp-html-replace');
 
 gulp.task("sass", function(){
 	return gulp.src("app/sass/**/*.sass")
-	.pipe(sass())
-	.pipe(autoprefixer({cascade:true}))
-	.pipe(gulp.dest("app/css"));
+	// .pipe(sass())
+    .pipe(sass({outputStyle: 'expand'}).on("error", notify.onError()))
+    .pipe(autoprefixer({cascade:true}))
+	.pipe(gulp.dest("app/css"))
+    // .pipe(browsersync.stream());
 });
 
-gulp.task('script-Libs', function(){
-	return gulp.src(['app/libs/**/*.js'])
-	.pipe(concat('libs.min.js'))
-	.pipe(uglify())
-	.pipe(gulp.dest('dist/libs'));
-});
+gulp.task("watch", function(){
+    browsersync({
+        server: "app",
+        notify: false,
+        // browser: ["firefox", "chrome" ]
+        browser: ["firefox"]
+    });
 
-gulp.task("css-libs", ['sass'], function() {
-	return gulp.src("app/libs/**/*.css")
-	.pipe(concatCss("libs.css"))
-	.pipe(cssnano("libs.css"))
-	.pipe(rename({suffix: '.min'}))
-	.pipe(gulp.dest("dist/libs"));
-});
-
-gulp.task("browsersync", function(){
-	browsersync({
-		server: {
-			baseDir: "app"
-		},
-		notify: false
-	});
-});
-
-gulp.task('clean', function() {
-	return del.sync('dist');
-})
-
-gulp.task('clear', function() {
-	return cache.clearAll();
-})
-
-gulp.task("img", function() {
-	return gulp.src('app/img/**/*')
-	.pipe(cache(imagemin({
-		interlacet: true,
-		progressive: true,
-		svgoplugins:[{removeVievBox: false}],
-		use: [pngquant()]
-		})))
-	.pipe(gulp.dest('dist/img'))
-});
-
-gulp.task("watch", ['browsersync'], function(){
-	gulp.watch("app/sass/**/*.sass",["sass"], browsersync.reload);
-	gulp.watch("app/css/**/*.css", browsersync.reload);
-	gulp.watch("app/*.html", browsersync.reload);
+    gulp.watch("app/sass/**/*.sass", ['sass'], browsersync.reload);
+    gulp.watch("app/css/**/*.css", browsersync.reload);
+    gulp.watch("app/*.html").on('change', browsersync.reload);
 	gulp.watch("app/js/*.js", browsersync.reload);
 });
 
-gulp.task('build', ['clean','img','sass','script-Libs', "css-libs"], function() {
-	
-	var buildCss = gulp.src([
-		'app/css/*.css'])
-		.pipe(concatCss("styles.css"))
+gulp.task('script-Libs', function(){
+    return gulp.src([
+        'app/libs/jquery/jquery-2.1.3.min.js',
+        'app/libs/**/*.js',
+        'app/js/**/*.js'
+    ])
+        .pipe(concat('scripts.min.js'))
+        .pipe(uglify())
+        .pipe(gulp.dest('dist/js'));
+});
+
+gulp.task("css-libs", function() {
+    return gulp.src([
+        "app/libs/**/*.css",
+        'app/css/*.css'
+    ])
+        .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
+        .pipe(concatCss("styles.css"))
         .pipe(cssnano("styles.css"))
         .pipe(rename({suffix: '.min'}))
-		.pipe(gulp.dest('dist/css'));
+        .pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('clean', function() {
+    return del.sync('dist');
+})
+
+gulp.task('clear', function() {
+    return cache.clearAll();
+})
+
+gulp.task("img", function() {
+    return gulp.src('app/img/**/*')
+        .pipe(cache(imagemin({
+            interlacet: true,
+            progressive: true,
+            svgoplugins:[{removeVievBox: false}],
+            use: [pngquant()]
+        })))
+        .pipe(gulp.dest('dist/img'))
+});
+
+gulp.task('build', ['clean','img','sass','script-Libs', "css-libs"], function() {
 
 	var buildFonts = gulp.src('app/fonts/**/*')
 	.pipe(gulp.dest('dist/fonts'));
 
-	var buildJs = gulp.src('app/js/**/*')
-	.pipe(gulp.dest('dist/js'));
-
 	var buildHtml = gulp.src('app/*.html')
 		.pipe(htmlreplace({
-            'csslibs': 'libs/libs.min.css',
-            'css': 'css/styles.min.css',
-            'js': 'libs/libs.min.js'
+            // 'csslibs': 'libs/libs.min.css',
+            'csslibs': 'css/styles.min.css',
+            'js': 'js/scripts.min.js'
 		}))
-	.pipe(gulp.dest('dist'));
+	    .pipe(gulp.dest('dist'));
 
 	var buildIco = gulp.src('app/*.png')
-	.pipe(gulp.dest('dist'));
+	    .pipe(gulp.dest('dist'));
 
     var buildPDF = gulp.src('app/*.pdf')
 		.pipe(gulp.dest('dist'));
+
+    var buildPortf = gulp.src('app/portf/**/*')
+        .pipe(gulp.dest('dist/portf'));
 });

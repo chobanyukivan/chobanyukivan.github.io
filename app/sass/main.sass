@@ -4,8 +4,7 @@ $titleh1color: #4d4338
 $titleh3color: #987e6e
 $textcolor: #3c342c
 $titleh3colorTecnology: #ddd2ca
-
-
+$a_hover: #af9483
 
 //синяя тема
 //$themecolor: #889EDB
@@ -33,10 +32,13 @@ $titleh3colorTecnology: #ddd2ca
     background-color: #e7e7e7
   &_bgc_dark
     background-color: #222222
+  &_bgc_darkest
+    background-color: #121516
   &_bgc_blue
     background-color: #889EDB
   &_color_fff
     color: #ffffff
+
 //модификаторы элементов
 .section
   &-portfolio-item-wrap
@@ -50,8 +52,6 @@ $titleh3colorTecnology: #ddd2ca
         border: 1px solid $titleh3color
         text-decoration: none
 
-.foot-social_color_brght
-  color: $titleh3color
 
 body
   font-family: "Raleway", sans-serif
@@ -61,6 +61,19 @@ body
   position: relative
   line-height: 1.6
   color: $textcolor
+  a
+    color: $themecolor
+    &:hover
+      color: $a_hover
+    &:active
+      color: $titleh3color
+    &:focus
+      color: $titleh3color
+    //&:visited
+    //  color: $titleh3color
+  ul
+    padding: 0
+    margin: 0
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid
@@ -83,6 +96,7 @@ section, footer
   height: 100vh
   background: url("../img/bg2.jpg") no-repeat top center
   background-size: cover
+  background-attachment: fixed
   &_bgc_darker
     background-color: rgba(0, 0, 0, 0.4)
 
@@ -101,6 +115,7 @@ header .button-toggle
   align-items: center
   z-index: 15
   outline: none
+  cursor: pointer
 
 .menu
   position: fixed
@@ -143,6 +158,7 @@ header .button-toggle
   justify-content: center
   align-items: center
   z-index: 10
+
   &__name
     border: 0.15em solid #e8e8e8
     padding: 16px 32px
@@ -151,6 +167,8 @@ header .button-toggle
     text-align: center
     font-weight: 500
     animation-delay: 1s
+    cursor: pointer
+    box-shadow: 0 0 25px #fff
   &__dscr
     font-size: 1.5em
     text-align: center
@@ -175,13 +193,13 @@ header .button-toggle
         display: inline-block
         font-size: 2em
         margin-right: 15px
-        &_color_theme
-          color: $themecolor
       &_margin-padding
         margin-top: 25px
         padding: 0
       &_margin0
         margin: 0
+      &_textAlign_end
+        text-align: end
     &__name
       font-size: 20px
       text-transform: uppercase
@@ -280,11 +298,12 @@ header .button-toggle
     &_ta_left
       text-align: left
   &-portfolio-item
-    background-image: url('../img/bg2.jpg')
     width: 100%
-    height: 180px
+    height: 250px
     background-size: cover
     text-align: center
+    background-position: center bottom
+
     &-decr
       background-color: #fff
       max-width: 500px
@@ -302,6 +321,10 @@ header .button-toggle
       padding: 10%
       opacity: 0
       transition: all .25s
+      &:nth-child(1) .section-portfolio-item
+        background-image: url('../portf/dist1/img/1.jpg')
+      &:nth-child(2) .section-portfolio-item
+        background-image: url('../portf/dist2/img/view.jpg')
       &__decr
         color: #d3d3d3
       &__button
@@ -318,12 +341,19 @@ header .button-toggle
     width: 150px
     margin: 40px auto
 
-.foot
-  &_bg_dark
-    background-color: #222222
-  &_color_fff
-    color: #ffffff
+.section-portfolio-item_wrap:nth-child(1) .section-portfolio-item
+  background-image: url('../portf/dist1/img/1.jpg')
+.section-portfolio-item_wrap:nth-child(2) .section-portfolio-item
+  background-image: url('../portf/dist2/img/view.jpg')
 
+.foot
+  display: flex
+  flex-direction: row
+  justify-content: space-between
+  &__content
+    line-height: 44px
+  > div
+    margin: 0 30px
 .title_text
   font-size: 14px
   text-transform: uppercase

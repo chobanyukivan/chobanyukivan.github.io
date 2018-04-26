@@ -19,6 +19,9 @@
 .section_bgc_dark {
   background-color: #222222; }
 
+.section_bgc_darkest {
+  background-color: #121516; }
+
 .section_bgc_blue {
   background-color: #889EDB; }
 
@@ -35,9 +38,6 @@
   border: 1px solid #987e6e;
   text-decoration: none; }
 
-.foot-social_color_brght {
-  color: #987e6e; }
-
 body {
   font-family: "Raleway", sans-serif;
   font-weight: normal;
@@ -46,6 +46,17 @@ body {
   position: relative;
   line-height: 1.6;
   color: #3c342c; }
+  body a {
+    color: #4e3c38; }
+    body a:hover {
+      color: #af9483; }
+    body a:active {
+      color: #987e6e; }
+    body a:focus {
+      color: #987e6e; }
+  body ul {
+    padding: 0;
+    margin: 0; }
 
 body input:focus:required:invalid,
 body textarea:focus:required:invalid {
@@ -67,7 +78,8 @@ section, footer {
 .head {
   height: 100vh;
   background: url("../img/bg2.jpg") no-repeat top center;
-  background-size: cover; }
+  background-size: cover;
+  background-attachment: fixed; }
   .head_bgc_darker {
     background-color: rgba(0, 0, 0, 0.4); }
 
@@ -91,7 +103,8 @@ header .button-toggle {
       -ms-flex-align: center;
           align-items: center;
   z-index: 15;
-  outline: none; }
+  outline: none;
+  cursor: pointer; }
 
 .menu {
   position: fixed;
@@ -158,7 +171,10 @@ header .button-toggle {
     text-align: center;
     font-weight: 500;
     -webkit-animation-delay: 1s;
-            animation-delay: 1s; }
+            animation-delay: 1s;
+    cursor: pointer;
+    -webkit-box-shadow: 0 0 25px #fff;
+            box-shadow: 0 0 25px #fff; }
   .content-wrapper__dscr {
     font-size: 1.5em;
     text-align: center;
@@ -184,13 +200,13 @@ header .button-toggle {
     display: inline-block;
     font-size: 2em;
     margin-right: 15px; }
-    .section-person-social__item_color_theme {
-      color: #4e3c38; }
   .section-person-social_margin-padding {
     margin-top: 25px;
     padding: 0; }
   .section-person-social_margin0 {
     margin: 0; }
+  .section-person-social_textAlign_end {
+    text-align: end; }
   .section-person__name {
     font-size: 20px;
     text-transform: uppercase;
@@ -306,11 +322,11 @@ header .button-toggle {
   text-align: left; }
 
 .section-portfolio-item {
-  background-image: url("../img/bg2.jpg");
   width: 100%;
-  height: 180px;
+  height: 250px;
   background-size: cover;
-  text-align: center; }
+  text-align: center;
+  background-position: center bottom; }
   .section-portfolio-item-decr {
     background-color: #fff;
     max-width: 500px;
@@ -329,6 +345,10 @@ header .button-toggle {
     opacity: 0;
     -webkit-transition: all .25s;
     transition: all .25s; }
+    .section-portfolio-item-wrap:nth-child(1) .section-portfolio-item {
+      background-image: url("../portf/dist1/img/1.jpg"); }
+    .section-portfolio-item-wrap:nth-child(2) .section-portfolio-item {
+      background-image: url("../portf/dist2/img/view.jpg"); }
     .section-portfolio-item-wrap__decr {
       color: #d3d3d3; }
     .section-portfolio-item-wrap__button {
@@ -348,11 +368,27 @@ header .button-toggle {
   width: 150px;
   margin: 40px auto; }
 
-.foot_bg_dark {
-  background-color: #222222; }
+.section-portfolio-item_wrap:nth-child(1) .section-portfolio-item {
+  background-image: url("../portf/dist1/img/1.jpg"); }
 
-.foot_color_fff {
-  color: #ffffff; }
+.section-portfolio-item_wrap:nth-child(2) .section-portfolio-item {
+  background-image: url("../portf/dist2/img/view.jpg"); }
+
+.foot {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .foot__content {
+    line-height: 44px; }
+  .foot > div {
+    margin: 0 30px; }
 
 .title_text {
   font-size: 14px;
