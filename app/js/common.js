@@ -1,3 +1,20 @@
+var isLoad = $(window).load(function(event) {
+    showSite();
+    return event;
+});
+
+function showSite() {
+    $(".loader_inner").fadeOut();
+    $(".loader").delay(400).fadeOut("slow");
+}
+
+setTimeout(function () {
+    if (!isLoad) {
+        showSite();
+    }
+},3000);
+
+
 $(document).ready(function () {
 
 
@@ -6,11 +23,6 @@ $(document).ready(function () {
         $(".menu").slideToggle();
     });
 
-    // $(".section_animation-1").animated("fadeIn", "fadeOut");
-    // $(".section_animation-2").animated("fadeIn", "fadeOut");
-    // $(".section_animation-3").animated("fadeIn", "fadeOut");
-    // $(".section_animation-4").animated("fadeIn", "fadeOut");
-    // $(".section_animation-5").animated("fadeIn", "fadeOut");
 
     $(".section_animation-1").animated("fadeInLeft", "fadeOutLeft");
     $(".section_animation-2").animated("fadeInDown", "fadeOutUp");
@@ -36,8 +48,3 @@ $(document).ready(function () {
 
 
 });
-$(window).load(function () {
-    $(".loader_inner").fadeOut();
-    $(".loader").delay(400).fadeOut("slow");
-
-}); 

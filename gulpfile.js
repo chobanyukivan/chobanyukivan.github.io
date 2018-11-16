@@ -50,8 +50,15 @@ gulp.task('script-Libs', function(){
 });
 
 gulp.task("css-libs", function() {
-    return gulp.src([
+    gulp.src([
         "app/libs/**/*.css",
+    ])
+        .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
+        .pipe(concatCss("libs.css"))
+        .pipe(cssnano("libs.css"))
+        .pipe(rename({suffix: '.min'}))
+        .pipe(gulp.dest('dist/css'));
+    gulp.src([
         'app/css/*.css'
     ])
         .pipe(cleancss( {level: { 1: { specialComments: 0 } } }))
@@ -87,13 +94,13 @@ gulp.task('build', ['clean','img','sass','script-Libs', "css-libs"], function() 
 
 	var buildHtml = gulp.src('app/*.html')
 		.pipe(htmlreplace({
-            // 'csslibs': 'libs/libs.min.css',
-            'csslibs': 'css/styles.min.css',
+            'csslibs': 'css/libs.min.css',
+            'css': 'css/styles.min.css',
             'js': 'js/scripts.min.js'
 		}))
 	    .pipe(gulp.dest('dist'));
 
-	var buildIco = gulp.src('app/*.png')
+	var buildIco = gulp.src('app/*.ico')
 	    .pipe(gulp.dest('dist'));
 
     var buildPDF = gulp.src('app/*.pdf')
