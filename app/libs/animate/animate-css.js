@@ -9,7 +9,7 @@
 								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
 						};
 				}, {
-						offset: "80%"
+						offset: "90%"
 				}).waypoint(function(dir) {
 						if (dir === "down") {
 								$(this).removeClass(inEffect).addClass(outEffect).css("opacity", "1");
