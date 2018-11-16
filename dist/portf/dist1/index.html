@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+<head lang="ru">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <!-- МЕТА -->
+    
+    <meta name="description" content="описание не длинее 155 символов" />
+    <meta name="keywords" content="мета-теги, шаблон, html, css" />
+    
+    <!-- Контролирует поведение поисковых систем при индексации страницы -->
+    <meta name="robots" content="index,follow,noodp">
+    <!-- Все поисковые системы -->
+    <meta name="googlebot" content="index,follow">
+    <!-- Указание отдельно для Google -->
+    
+    <!-- Позволяет указать Google не показывать в поисковой выдаче поле для поиска по сайту -->
+    <meta name="google" content="nositelinkssearchbox">
+    <!-- Позволяет указать Google не предлагать перевести эту страницу -->
+    <meta name="google" content="notranslate">
+    <!-- Короткое описание тематики вашего сайта -->
+    <meta name="subject" content="тематика вашего сайта">
+    <!-- open graph Facebook-->
+    <meta property="og:title" content="Заголовок" />
+    <meta property="og:type" content="website" />
+    <!-- если сайт многоязычный -->
+    <meta property="og:locale" content="ru_RU">
+    <!-- не меньше 600х315, не более 8Мб -->
+    <meta property="og:image" content="http://localhost.my/img/og_cover.jpg" />
+    <meta property="og:description" content="описание не длинее 155 символов" />
+    
+    <!-- Фавиконы и иконки сайта -->
+    <link rel="icon" type="image/png" href="/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="/android-chrome-192x192.png" sizes="192x192">
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96">
+    <link rel="icon" type="image/png" href="/favicon-16x16.png" sizes="16x16">
+    
+    <link rel="stylesheet" href="css/style.css">
+    <script src="libs/jquery.min.js"></script>
+    <script src="js/main.js"></script>
+    <title>Blogue</title>
+</head>
+<body>
+    <header>
+        <h1 class="logo">
+           <a href="index.html">Blogue</a>
+        </h1>
+        <div class="container">
+            <div class="logo__nav">
+                <a href="index.html">Blogue</a>
+            </div>
+            <div class="menu-btn"></div>
+            <nav class="nav">
+                <div class="nav-item">
+                    <a href="index.html">Home</a>
+                </div>
+                <div class="nav-item">
+                    <a href="filters.html">Cathegories</a>
+                </div>
+                <div class="nav-item">
+                    <a href="about.html">About</a>
+                </div>
+                <div class="nav-item">
+                    <a href="contact.html">Contacts</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <section class="main-article" style="background-image: url('img/1.jpg')">
+        <div class="main-article__inner">
+            <h2 class="main-article__head"><a href="#">Lorem</a></h2>
+            <article class="main-article__desc">
+                Каждый веб-разработчик знает, что такое текст-«рыба». Текст этот, несмотря на название, не имеет никакого отношения к обитателям водоемов. Используется он веб-дизайнерами для вставки на интернет-страницы и демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и т.д.
+            </article>
+            <button class="main-article__btn" onClick='location.href="post-page.html"'>Читать далее</button>
+        </div>
+    </section>
+    <div class="content__wrapper">
+        <section class="articles-wrap">
+            <div class="articles-wrap__head">
+                <p>Категория:</p>
+                <h3>Общество</h3>
+            </div>
+            <div class="articles-list">
+                <div class="articles-list__item">
+                    <div class="articles-list__item-pic">
+                        <a href="#"><img src="img/1.jpg" alt=""></a>
+                    </div>
+                    <div class="articles-list__item-desc">
+                        <a href="#" class="article-label">
+                            Фотография
+                        </a>
+                        <h3 class="article-head"> <a href="#">Что можно, а что нельзя: подробное руководство</a></h3>
+                        <p class="article-date"><span> 12.03.2018</span> - <span>Ivan</span>   </p>
+                        <article class="article-desc">
+                            Только закрепит за вами имидж неудачника карьерной лестнице, чтобы делать что-то хорошее. Проблемами, и извлекать из них уроки помнят плохое, и а только.
+                        </article>
+                        <button class="article-btn">Читать далее...</button>
+                    </div>
+                </div>
+                <div class="articles-list__item">
+                    <div class="articles-list__item-pic">
+                        <a href="#"><img src="img/1.jpg" alt=""></a>
+                    </div>
+                    <div class="articles-list__item-desc">
+                        <a href="#" class="article-label">
+                            Фотография
+                        </a>
+                        <h3 class="article-head"> <a href="#">Что можно, а что нельзя: подробное руководство</a></h3>
+                        <p class="article-date"><span> 12.03.2018</span> - <span>Ivan</span>   </p>
+                        <article class="article-desc">
+                            Только закрепит за вами имидж неудачника карьерной лестнице, чтобы делать что-то хорошее. Проблемами, и извлекать из них уроки помнят плохое, и а только.
+                        </article>
+                        <button class="article-btn">Читать далее...</button>
+                    </div>
+                </div>
+                <div class="articles-list__item">
+                    <div class="articles-list__item-pic">
+                        <a href="#"><img src="img/1.jpg" alt=""></a>
+                    </div>
+                    <div class="articles-list__item-desc">
+                        <a href="#" class="article-label">
+                            Фотография
+                        </a>
+                        <h3 class="article-head"> <a href="#">Что можно, а что нельзя: подробное руководство</a></h3>
+                        <p class="article-date"><span> 12.03.2018</span> - <span>Ivan</span>   </p>
+                        <article class="article-desc">
+                            Только закрепит за вами имидж неудачника карьерной лестнице, чтобы делать что-то хорошее. Проблемами, и извлекать из них уроки помнят плохое, и а только.
+                        </article>
+                        <button class="article-btn">Читать далее...</button>
+                    </div>
+                </div>
+                <div class="articles-list__item">
+                    <div class="articles-list__item-pic">
+                        <a href="#"><img src="img/1.jpg" alt=""></a>
+                    </div>
+                    <div class="articles-list__item-desc">
+                        <a href="#" class="article-label">
+                            Фотография
+                        </a>
+                        <h3 class="article-head"> <a href="#">Что можно, а что нельзя: подробное руководство</a></h3>
+                        <p class="article-date"><span> 12.03.2018</span> - <span>Ivan</span>   </p>
+                        <article class="article-desc">
+                            Только закрепит за вами имидж неудачника карьерной лестнице, чтобы делать что-то хорошее. Проблемами, и извлекать из них уроки помнят плохое, и а только.
+                        </article>
+                        <button class="article-btn">Читать далее...</button>
+                    </div>
+                </div>
+                <div class="articles-list__item">
+                    <div class="articles-list__item-pic">
+                        <a href="#"><img src="img/1.jpg" alt=""></a>
+                    </div>
+                    <div class="articles-list__item-desc">
+                        <a href="#" class="article-label">
+                            Фотография
+                        </a>
+                        <h3 class="article-head"> <a href="#">Что можно, а что нельзя: подробное руководство</a></h3>
+                        <p class="article-date"><span> 12.03.2018</span> - <span>Ivan</span>   </p>
+                        <article class="article-desc">
+                            Только закрепит за вами имидж неудачника карьерной лестнице, чтобы делать что-то хорошее. Проблемами, и извлекать из них уроки помнят плохое, и а только.
+                        </article>
+                        <button class="article-btn">Читать далее...</button>
+                    </div>
+                </div>
+                <div class="articles-list__item">
+                    <div class="articles-list__item-pic">
+                        <a href="#"><img src="img/1.jpg" alt=""></a>
+                    </div>
+                    <div class="articles-list__item-desc">
+                        <a href="#" class="article-label">
+                            Фотография
+                        </a>
+                        <h3 class="article-head"> <a href="#">Что можно, а что нельзя: подробное руководство</a></h3>
+                        <p class="article-date"><span> 12.03.2018</span> - <span>Ivan</span>   </p>
+                        <article class="article-desc">
+                            Только закрепит за вами имидж неудачника карьерной лестнице, чтобы делать что-то хорошее. Проблемами, и извлекать из них уроки помнят плохое, и а только.
+                        </article>
+                        <button class="article-btn">Читать далее...</button>
+                    </div>
+                </div>
+            </div>
+            <div class="articles-pagination">
+                <nav class="pagination">
+                    <div class="pagination-item first-item"><a href="#">First</a></div>
+                    <div class="pagination-item prev-item"><a href="#">Prev</a></div>
+                    <div class="pagination-item active"><a href="#">1</a></div>
+                    <div class="pagination-item"><a href="#">2</a></div>
+                    <div class="pagination-dots">...</div>
+                    <div class="pagination-item"><a href="#">25</a></div>
+                    <div class="pagination-item"><a href="#">26</a></div>
+                    <div class="pagination-item next-item"><a href="#">Next</a></div>
+                    <div class="pagination-item last-item"><a href="#">Last</a></div>
+                </nav>
+            </div>
+        </section>
+        <aside class="aside-wrap">
+            <div class="aside-info">
+                <h4>Обо мне</h4>
+                <div class="aside-info__photo">
+                    <img src="img/1.jpg" alt="">
+                </div>
+                <div class="aside-info__desc">
+                    <h5>Ivan</h5>
+                    <span>Developer & freeman</span>
+                    <p>Добряк и консерва, маг и волшебник, много много слов еще надо придумать, чтобы заполнить контент</p>
+                </div>
+            </div>
+            <div class="wrap-follow">
+                <h4>Социальные сети</h4>
+                <div class="wrap-follow__social">
+                    <a href="#" class="fa fa-envelope"></a>
+                </div>
+                <div class="wrap-follow__social">
+                    <a href="#" class="fa fa-linkedin"></a>
+                </div>
+                <div class="wrap-follow__social">
+                    <a href="#" class="fa fa-vk"></a>
+                </div>
+                <div class="wrap-follow__social">
+                    <a href="#" class="fa fa-instagram"></a>
+                </div>
+            </div>
+            <div class="aside-cathegory">
+                <h4>Категории</h4>
+                <div class="aside-cathegory__item">
+                    <a href="#">
+                        <h5 class="aside-cathegory__item-name">Фотография</h5>
+                        <span class="aside-cathegory__item-label">26</span>
+                    </a>
+                </div>
+                <div class="aside-cathegory__item">
+                    <a href="#">
+                        <h5 class="aside-cathegory__item-name">Фотография</h5>
+                        <span class="aside-cathegory__item-label">26</span>
+                    </a>
+                </div>
+                <div class="aside-cathegory__item">
+                    <a href="#">
+                        <h5 class="aside-cathegory__item-name">Фотография</h5>
+                        <span class="aside-cathegory__item-label">26</span>
+                    </a>
+                </div>
+                <div class="aside-cathegory__item">
+                    <a href="#">
+                        <h5 class="aside-cathegory__item-name">Фотография</h5>
+                        <span class="aside-cathegory__item-label">26</span>
+                    </a>
+                </div>
+                <div class="aside-cathegory__item">
+                    <a href="#">
+                        <h5 class="aside-cathegory__item-name">Фотография</h5>
+                        <span class="aside-cathegory__item-label">26</span>
+                    </a>
+                </div>
+            </div>
+            <div class="aside-popular">
+                <h4>Наиболее популярные</h4>
+                <a href="#" class="aside-popular__item">
+                    <div class="aside-popular__item-photo">
+                        <img src="img/1.jpg" alt="">
+                    </div>
+                    <div class="aside-popular__item-desc">
+                        <h6>Топ самых лучших браузеров</h6>
+                        <p>Март, 2018</p>
+                    </div>
+                </a>
+                <a href="#" class="aside-popular__item">
+                    <div class="aside-popular__item-photo">
+                        <img src="img/1.jpg" alt="">
+                    </div>
+                    <div class="aside-popular__item-desc">
+                        <h6>Топ самых лучших браузеров</h6>
+                        <p>Март, 2018</p>
+                    </div>
+                </a>
+                <a href="#" class="aside-popular__item">
+                    <div class="aside-popular__item-photo">
+                        <img src="img/1.jpg" alt="">
+                    </div>
+                    <div class="aside-popular__item-desc">
+                        <h6>Топ самых лучших браузеров</h6>
+                        <p>Март, 2018</p>
+                    </div>
+                </a>
+                <a href="#" class="aside-popular__item">
+                    <div class="aside-popular__item-photo">
+                        <img src="img/1.jpg" alt="">
+                    </div>
+                    <div class="aside-popular__item-desc">
+                        <h6>Топ самых лучших браузеров</h6>
+                        <p>Март, 2018</p>
+                    </div>
+                </a>
+            </div>
+        </aside>
+    </div>
+
+    <div id="preloader">
+        <div id="preloader_preload">
+        </div>
+    </div>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-logo"><a href="#">Ivans_blog</a></div>
+            <div class="footer-desc"><p>Free thoughts, free time</p> <span>[always in progress]</span></div>
+            <div class="footer-social">
+                <div class="footer-social-icon"><a href="#" class="fa fa-envelope"></a></div>
+                <div class="footer-social-icon"><a href="#" class="fa fa-linkedin"></a></div>
+                <div class="footer-social-icon"><a href="#" class="fa fa-vk"></a></div>
+                <div class="footer-social-icon"><a href="#" class="fa fa-instagram"></a></div>
+            </div>
+            <div class="footer-nav">
+                <div class="footer-rights">Иван Чобанюк, 2018</div>
+                <nav>
+                    <ul>
+                        <li><a href="#">Home</a></li>
+                        <li><a href="#">Cathegories</a></li>
+                        <li><a href="#">Contacts</a></li>
+                        <li><a href="#">About</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
